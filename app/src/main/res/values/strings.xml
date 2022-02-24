@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">bioplasticbad</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="gmail">Gmail</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_username">Forgot Username?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
 </resources>
