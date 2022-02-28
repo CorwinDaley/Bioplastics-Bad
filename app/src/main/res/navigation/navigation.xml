@@ -19,4 +19,13 @@
             android:id="@+id/action_homepage_to_login"
             app:destination="@id/homepage" />
     </fragment>
+    <fragment
+        android:id="@+id/profilepage"
+        android:name="com.example.bioplasticbad.profilepage"
+        android:label="fragment_profilepage"
+        tools:layout="@layout/fragment_profilepage" >
+        <action
+            android:id="@+id/action_profilepage_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
 </navigation>
