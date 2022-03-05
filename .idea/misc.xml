@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_logging.xml" value="0.1671195652173913" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.15337837837837837" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad/app/src/main/res/layout/fragment_homepage.xml" value="0.16530797101449277" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1358695652173913" />
+        <entry key="app/src/main/res/layout/fragment_journal.xml" value="0.1816123188405797" />
+        <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.29848396190698595" />
+        <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.310031813469486" />
       </map>
     </option>
   </component>
