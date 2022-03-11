@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">bioplasticbad</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="critter_name">Connie The Compost Critter</string>
+    <string name="item_name">Item Name</string>
+    <string name="edit_journal">edit Journal</string>
+    <string name="add_new_composted_item">Add New Item</string>
+    <string name="journal_entry">Journal Entry</string>
+    <string name="turn_compost_count_title">Days until you need to turn your compost</string>
+    <string name="update_day_count_button">Update Day Count</string>
 </resources>
