@@ -21,7 +21,7 @@
 
         <ImageView
             android:id="@+id/imageView_logging_optionalPicture"
-            android:layout_width="317dp"
+            android:layout_width="212dp"
             android:layout_height="144dp"
             tools:src="@tools:sample/backgrounds/scenic" />
 
@@ -29,14 +29,14 @@
             android:id="@+id/textView_logging_journalEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/journal_entry"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Button
             android:id="@+id/button_logging_editJournal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add_to_journal" />
+            android:text="@string/edit_journal" />
 
     </LinearLayout>
 
