@@ -5,174 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Extra Dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup4"
-        tools:layout_editor_absoluteY="604dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dark"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup4"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        tools:layout_editor_absoluteY="604dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup3"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="344dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="607dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup4"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
-        tools:layout_editor_absoluteY="607dp">
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup4"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="607dp">
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Light"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-        app:layout_constraintHorizontal_bias="0.224"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
-        tools:layout_editor_absoluteY="603dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup3"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="343dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="291dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
-        tools:layout_editor_absoluteY="291dp">
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup4"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="291dp">
-
-    </RadioGroup>
-
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username7"
+        android:id="@+id/editText_accountSetup_birthday2"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="156dp"
-        android:hint="Language"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Preferences"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="498dp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username2"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="536dp"
-        android:hint="@string/username"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username6"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="248dp"
-        android:hint="Email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username5"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="312dp"
-        android:hint="Phone Number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username3"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="472dp"
-        android:hint="Birthday"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountLogin_username9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="416dp"
         android:hint="Other"
-        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <Button
+        android:id="@+id/button_accountLogin_next2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup4"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_signin"
-        app:layout_constraintVertical_bias="0.050000012" />
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/necessarymarker"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_accountSetup_birthday"
+        app:layout_constraintEnd_toStartOf="@+id/editText_accountSetup_birthday"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_birthday"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText_accountSetup_username"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText_accountSetup_birthday"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthday"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/textView_accountLogin_appName2"
@@ -187,41 +80,167 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_accountSetup_basicInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Basic Information"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="119dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_appName2"
+        app:layout_constraintVertical_bias="0.044" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_accountSetup_contactInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact Information"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="340dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_appName2"
+        app:layout_constraintVertical_bias="0.468000002" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView_accountSetup_contactInformation2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Male"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
-        tools:layout_editor_absoluteY="287dp" />
+        android:text="Contact Information"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_appName2"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:contentDescription="@string/necessarymarker"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_accountSetup_email"
+        app:layout_constraintEnd_toStartOf="@+id/editText_accountSetup_email"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_email"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText_accountSetup_phoneNumber"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_accountSetup_email"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView_accountSetup_preference"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Female"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup4"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        tools:layout_editor_absoluteY="288dp" />
+        android:text="Preferences"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText_accountSetup_phoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="312dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintVertical_bias="0.42000002">
+
+        <RadioButton
+            android:id="@+id/radioButton_accountSetup_dark"
+            android:layout_width="105dp"
+            android:layout_height="34dp"
+            android:text="@string/light" />
+
+        <RadioButton
+            android:id="@+id/radioButton_accountSetup_dark"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:text="@string/dark" />
+
+        <RadioButton
+            android:id="@+id/radioButton_accountSetup_extraDark"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:text="@string/extra_dark" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText_accountSetup_email"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/gmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="1dp"
+        android:contentDescription="@string/necessarymarker"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_accountSetup_username"
+        app:layout_constraintEnd_toStartOf="@+id/editText_accountSetup_username"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_username"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="309dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation">
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            tools:layout_editor_absoluteX="-145dp"
+            tools:layout_editor_absoluteY="661dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:text="Other" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
