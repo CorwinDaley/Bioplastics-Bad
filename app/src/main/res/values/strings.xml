@@ -17,5 +17,21 @@
     <string name="extra_dark">Extra Dark</string>
     <string name="necessarymarker">NecessaryMarker</string>
     <string name="birthday">Birthday</string>
+    <string name="other">Other</string>
+    <string name="account_setup">Account Setup</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="other">Other</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="preferences">Preferences</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="recycled_before">- Has recycled before</string>
+    <string name="app_before">- Has used the app</string>
+    <string name="hasn_t_used_the_app">- Hasn\'t used the app</string>
+    <string name="advanced">Advanced</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="begginner">Begginner</string>
+    <string name="hasn_t_recycled_before">- Hasn\'t recycled before</string>
 
 </resources>

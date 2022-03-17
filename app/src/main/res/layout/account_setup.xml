@@ -9,13 +9,14 @@
         android:id="@+id/editText_accountSetup_birthday2"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:hint="Other"
+        android:hint="@string/other"
         app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintVertical_bias="0.7"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button_accountLogin_next2"
@@ -41,7 +42,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_birthday"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ImageContrastCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText_accountSetup_username"
@@ -53,7 +55,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText_accountSetup_birthday"
@@ -65,13 +68,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_basicInformation"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView_accountLogin_appName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Setup"
+        android:text="@string/account_setup"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +87,7 @@
         android:id="@+id/textView_accountSetup_basicInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Basic Information"
+        android:text="@string/basic_information"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +100,7 @@
         android:id="@+id/textView_accountSetup_contactInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact Information"
+        android:text="@string/contact_information"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,19 +108,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_appName2"
         app:layout_constraintVertical_bias="0.468000002" />
-
-    <TextView
-        android:id="@+id/textView_accountSetup_contactInformation2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Information"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.663"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountLogin_appName2"
-        app:layout_constraintVertical_bias="0.468" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -128,25 +119,27 @@
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_email"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ImageContrastCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText_accountSetup_phoneNumber"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:hint="Phone Number"
+        android:hint="@string/phone_number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_accountSetup_email"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintVertical_bias="0.07999998"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView_accountSetup_preference"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preferences"
+        android:text="@string/preferences"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editText_accountSetup_phoneNumber"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
@@ -165,22 +158,26 @@
         app:layout_constraintVertical_bias="0.42000002">
 
         <RadioButton
-            android:id="@+id/radioButton_accountSetup_dark"
+            android:id="@+id/radioButton_accountSetup_light"
             android:layout_width="105dp"
             android:layout_height="34dp"
-            android:text="@string/light" />
+            android:text="@string/light"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
-            android:id="@+id/radioButton_accountSetup_dark"
+            android:id="@+id/radioButton3"
             android:layout_width="105dp"
             android:layout_height="match_parent"
-            android:text="@string/dark" />
+            android:layout_weight="1"
+            android:text="@string/dark"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/radioButton_accountSetup_extraDark"
             android:layout_width="105dp"
             android:layout_height="match_parent"
-            android:text="@string/extra_dark" />
+            android:text="@string/extra_dark"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
 
@@ -194,7 +191,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_contactInformation"
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.225"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -208,7 +206,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_username"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ImageContrastCheck" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -225,13 +224,15 @@
             android:id="@+id/radioButton6"
             android:layout_width="105dp"
             android:layout_height="match_parent"
-            android:text="Male" />
+            android:text="@string/male"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/radioButton5"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
-            android:text="Female"
+            android:text="@string/female"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_editor_absoluteX="-145dp"
             tools:layout_editor_absoluteY="661dp" />
 
@@ -239,7 +240,8 @@
             android:id="@+id/radioButton4"
             android:layout_width="105dp"
             android:layout_height="match_parent"
-            android:text="Other" />
+            android:text="@string/other"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
 
