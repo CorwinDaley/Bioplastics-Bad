@@ -10,6 +10,8 @@
         <entry key="app/src/main/res/layout/accountcreation.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1358695652173913" />
         <entry key="app/src/main/res/layout/app_login.xml" value="0.2871376811594203" />
+        <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.1828125" />
+        <entry key="app/src/main/res/layout/fragment_profilepage.xml" value="0.1828125" />
       </map>
     </option>
   </component>
