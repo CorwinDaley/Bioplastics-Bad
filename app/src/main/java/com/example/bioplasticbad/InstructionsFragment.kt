@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,18 +36,29 @@ class InstructionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_instructions, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_instructions, container, false)
+        val compostingInstructionsButton = rootView.findViewById<Button>(R.id.button_basicCompostingInstruction_instructionFragment)
+        compostingInstructionsButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_basicCompostingInstructionFragment)
+        }
+
+
+        val insulateHeatInstructionButton = rootView.findViewById<Button>(R.id.button_insulateHeatInstruction_instructionFragment)
+        insulateHeatInstructionButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
+        }
+
+
+        //val readBioplasticLabelsButton = rootView.findViewById<Button>(R.id.button_)
+        //readBioplasticLabelsButton.setOnClickListener {
+            //view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
+        //}
+
+        return rootView
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment InstructionsFragment.
-         */
+
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
