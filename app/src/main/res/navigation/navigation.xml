@@ -28,4 +28,34 @@
             android:id="@+id/action_profilepage_to_homepage"
             app:destination="@id/homepage" />
     </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.bioplasticbad.InstructionsFragment"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_basicCompostingInstructionFragment"
+            app:destination="@id/basicCompostingInstructionFragment" />
+        <action
+            android:id="@+id/action_instructionsFragment_to_insulateHeatInstructionFragment"
+            app:destination="@id/insulateHeatInstructionFragment" />
+        <action
+            android:id="@+id/action_instructionsFragment_to_readBioplasticLabelsFragment"
+            app:destination="@id/readBioplasticLabelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicCompostingInstructionFragment"
+        android:name="com.example.bioplasticbad.BasicCompostingInstructionFragment"
+        android:label="fragment_basic_composting_instruction"
+        tools:layout="@layout/fragment_basic_composting_instruction" />
+    <fragment
+        android:id="@+id/insulateHeatInstructionFragment"
+        android:name="com.example.bioplasticbad.insulateHeatInstructionFragment"
+        android:label="fragment_insulate_heat_instruction"
+        tools:layout="@layout/fragment_insulate_heat_instruction" />
+    <fragment
+        android:id="@+id/readBioplasticLabelsFragment"
+        android:name="com.example.bioplasticbad.readBioplasticLabelsFragment"
+        android:label="fragment_read_bioplastic_labels"
+        tools:layout="@layout/fragment_read_bioplastic_labels" />
 </navigation>
