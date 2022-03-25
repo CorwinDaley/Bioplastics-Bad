@@ -1,0 +1,43 @@
+[
+  {
+    "user" :
+    [
+      {
+        "account" :
+        [
+          {
+            "username" : "",
+            "password" : "",
+            "created" : "0000"
+          }
+        ]
+      },
+      {
+        "bio":
+        [
+          {
+            "desc": "",
+            "pronouns" : "",
+            "publicName": ""
+          }
+        ]
+      },
+      {
+        "journal" :
+        [
+          {
+            "logs":
+            [
+              {
+                "date": "",
+                "name": "",
+                "description" : "",
+                "image:" : ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
