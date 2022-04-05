@@ -1,11 +1,35 @@
 <resources>
     <string name="app_name">bioplasticbad</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="critter_name">Connie The Compost Critter</string>
-    <string name="item_name">Item Name</string>
-    <string name="edit_journal">edit Journal</string>
-    <string name="add_new_composted_item">Add New Item</string>
-    <string name="journal_entry">Journal Entry</string>
-    <string name="turn_compost_count_title">Days until you need to turn your compost</string>
-    <string name="update_day_count_button">Update Day Count</string>
+    <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="gmail">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_username">Forgot Username?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="finish">Finish</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="extra_dark">Extra Dark</string>
+    <string name="necessarymarker">NecessaryMarker</string>
+    <string name="birthday">Birthday</string>
+    <string name="other">Other</string>
+    <string name="account_setup">Account Setup</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="preferences">Preferences</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="recycled_before">- Has recycled before</string>
+    <string name="app_before">- Has used the app</string>
+    <string name="hasn_t_used_the_app">- Hasn\'t used the app</string>
+    <string name="advanced">Advanced</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="begginner">Beginner</string>
+    <string name="hasn_t_recycled_before">- Hasn\'t recycled before</string>
+
 </resources>

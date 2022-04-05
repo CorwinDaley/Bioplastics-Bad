@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_appLogin_recycledBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycled_before"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_appLogin_Intermediate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_appLogin_Advanced"
+        app:layout_constraintTop_toBottomOf="@+id/button_appLogin_Advanced"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <TextView
+        android:id="@+id/textView_appLogin_appBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_before"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_appLogin_Intermediate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_appLogin_recycledBefore"
+        app:layout_constraintTop_toBottomOf="@+id/textView_appLogin_recycledBefore"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textView_appLogin_recycledBefore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycled_before"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_appLogin_Begginer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_appLogin_Intermediate"
+        app:layout_constraintTop_toBottomOf="@+id/button_appLogin_Intermediate"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <TextView
+        android:id="@+id/textView_appLogin_appNever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hasn_t_used_the_app"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_appLogin_Begginer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_appLogin_recycledBefore2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_appLogin_recycledBefore2"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/button_appLogin_Advanced"
+        android:layout_width="221dp"
+        android:layout_height="119dp"
+        android:text="@string/advanced"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <Button
+        android:id="@+id/button_appLogin_Intermediate"
+        android:layout_width="221dp"
+        android:layout_height="119dp"
+        android:text="@string/intermediate"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_appLogin_Advanced"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/button_appLogin_Begginer"
+        android:layout_width="221dp"
+        android:layout_height="119dp"
+        android:text="@string/begginner"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_appLogin_Intermediate"
+        app:layout_constraintVertical_bias="0.504" />
+
+    <TextView
+        android:id="@+id/textView_appLogin_recycledNever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/hasn_t_recycled_before"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_appLogin_Begginer"
+        app:layout_constraintTop_toBottomOf="@+id/button_appLogin_Begginer"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/textView_appLogin_appNever2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hasn_t_used_the_app"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_appLogin_recycledNever"
+        app:layout_constraintTop_toBottomOf="@+id/textView_appLogin_recycledNever"
+        app:layout_constraintVertical_bias="0.24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
