@@ -43,8 +43,8 @@
         android:id="@+id/button_logging_newEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:text="@string/add_new_composted_item"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
@@ -52,10 +52,9 @@
         android:id="@+id/button_logging_turnCompost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/update_day_count_button"
+        android:text="@string/update_day_count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_logging_newEntry"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_logging_newEntry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
