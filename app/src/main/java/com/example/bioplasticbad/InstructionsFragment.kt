@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentContainer
 import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -32,27 +33,27 @@ class InstructionsFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+
+        inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_instructions, container, false)
+
         val compostingInstructionsButton = rootView.findViewById<Button>(R.id.button_basicCompostingInstruction_instructionFragment)
         compostingInstructionsButton.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_basicCompostingInstructionFragment)
         }
-
 
         val insulateHeatInstructionButton = rootView.findViewById<Button>(R.id.button_insulateHeatInstruction_instructionFragment)
         insulateHeatInstructionButton.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
         }
 
-
-        //val readBioplasticLabelsButton = rootView.findViewById<Button>(R.id.button_)
-        //readBioplasticLabelsButton.setOnClickListener {
-            //view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
-        //}
+        val readBioplasticLabelsButton = rootView.findViewById<Button>(R.id.button_readBioplasticLabels_instructionFragment)
+        readBioplasticLabelsButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
+        }
 
         return rootView
     }
