@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homepage_to_profilepage"
             app:destination="@id/profilepage" />
+        <action
+            android:id="@+id/action_homepage_to_loggingFragment"
+            app:destination="@id/loggingFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilepage"
@@ -51,4 +54,23 @@
         android:name="com.example.bioplasticbad.readBioplasticLabelsFragment"
         android:label="fragment_read_bioplastic_labels"
         tools:layout="@layout/fragment_read_bioplastic_labels" />
+    <fragment
+        android:id="@+id/loggingFragment"
+        android:name="com.example.bioplasticbad.LoggingLayout"
+        android:label="fragment_logging_layout"
+        tools:layout="@layout/fragment_logging_layout" >
+        <action
+            android:id="@+id/newOrEditJounral"
+            app:destination="@id/NewJournal" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewJournal"
+        android:name="com.example.bioplasticbad.JournalFragment"
+        android:label="fragment_new_journal"
+        tools:layout="@layout/fragment_journals" >
+        <action
+            android:id="@+id/finishJounral"
+            app:destination="@id/loggingFragment" />
+    </fragment>
+
 </navigation>
