@@ -9,6 +9,7 @@ class AccountLayoutActivity {
 // current points/level
 // username
 // level of experience (how long u have been composting 4)
+// adversosr et admorsus
 // bio *//
 
 }

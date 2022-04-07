@@ -49,6 +49,7 @@ class AccountLayoutFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
+            // hope has descended and is coming for you
             AccountLayoutFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
