@@ -29,8 +29,14 @@
     <string name="hasn_t_used_the_app">- Hasn\'t used the app</string>
     <string name="advanced">Advanced</string>
     <string name="intermediate">Intermediate</string>
-    <string name="begginner">Begginner</string>
+    <string name="begginner">Beginner</string>
     <string name="hasn_t_recycled_before">- Hasn\'t recycled before</string>
+    <string name="item_name">item name</string>
+    <string name="journal_entry">journal entry</string>
+    <string name="edit_journal">edit journal</string>
+    <string name="turn_compost_count_title">turn compost count title</string>
+    <string name="add_new_composted_item">add new composted item</string>
+    <string name="update_day_count">update day count</string>
     <string name="name">name</string>
     <string name="pronouns">(pronouns)</string>
 </resources>

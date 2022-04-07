@@ -2,30 +2,75 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/homepage">
+    android:id="@+id/navigation">
 
-    <activity
-        android:id="@+id/homepage"
-        android:name="com.example.bioplasticbad.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
-        android:id="@+id/login"
-        android:name="com.example.bioplasticbad.homepage"
+        android:id="@+id/homepage"
+        android:name="com.example.bioplasticbad.HomepageFragment"
         android:label="fragment_homepage"
         tools:layout="@layout/fragment_homepage" >
         <action
-            android:id="@+id/action_homepage_to_login"
-            app:destination="@id/homepage" />
+            android:id="@+id/action_homepage_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+        <action
+            android:id="@+id/action_homepage_to_profilepage"
+            app:destination="@id/profilepage" />
+        <action
+            android:id="@+id/action_homepage_to_loggingFragment"
+            app:destination="@id/loggingFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilepage"
         android:name="com.example.bioplasticbad.profilepage"
         android:label="fragment_profilepage"
-        tools:layout="@layout/fragment_profilepage" >
+        tools:layout="@layout/fragment_profilepage" />
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.bioplasticbad.InstructionsFragment"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" >
         <action
-            android:id="@+id/action_profilepage_to_homepage"
-            app:destination="@id/homepage" />
+            android:id="@+id/action_instructionsFragment_to_basicCompostingInstructionFragment"
+            app:destination="@id/basicCompostingInstructionFragment" />
+        <action
+            android:id="@+id/action_instructionsFragment_to_insulateHeatInstructionFragment"
+            app:destination="@id/insulateHeatInstructionFragment" />
+        <action
+            android:id="@+id/action_instructionsFragment_to_readBioplasticLabelsFragment"
+            app:destination="@id/readBioplasticLabelsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/basicCompostingInstructionFragment"
+        android:name="com.example.bioplasticbad.BasicCompostingInstructionFragment"
+        android:label="fragment_basic_composting_instruction"
+        tools:layout="@layout/fragment_basic_composting_instruction" />
+    <fragment
+        android:id="@+id/insulateHeatInstructionFragment"
+        android:name="com.example.bioplasticbad.insulateHeatInstructionFragment"
+        android:label="fragment_insulate_heat_instruction"
+        tools:layout="@layout/fragment_insulate_heat_instruction" />
+    <fragment
+        android:id="@+id/readBioplasticLabelsFragment"
+        android:name="com.example.bioplasticbad.readBioplasticLabelsFragment"
+        android:label="fragment_read_bioplastic_labels"
+        tools:layout="@layout/fragment_read_bioplastic_labels" />
+    <fragment
+        android:id="@+id/loggingFragment"
+        android:name="com.example.bioplasticbad.LoggingLayout"
+        android:label="fragment_logging_layout"
+        tools:layout="@layout/fragment_logging_layout" >
+        <action
+            android:id="@+id/newOrEditJounral"
+            app:destination="@id/NewJournal" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewJournal"
+        android:name="com.example.bioplasticbad.JournalFragment"
+        android:label="fragment_new_journal"
+        tools:layout="@layout/fragment_journals" >
+        <action
+            android:id="@+id/finishJounral"
+            app:destination="@id/loggingFragment" />
+    </fragment>
+
 </navigation>

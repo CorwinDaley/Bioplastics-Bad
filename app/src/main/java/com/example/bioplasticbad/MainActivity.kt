@@ -14,4 +14,5 @@ class MainActivity : AppCompatActivity() {
         var testPersonal = personal("Jonas","He/Him","2022.4.1",1,0)
         var testUser = User(testAccount, testLogs, testPersonal)
     }
+
 }
