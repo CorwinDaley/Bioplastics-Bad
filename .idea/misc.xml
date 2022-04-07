@@ -5,10 +5,15 @@
       <map>
         <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad/app/src/main/res/layout/fragment_homepage.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad2/app/src/main/res/layout/account_layout.xml" value="0.1" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad2/app/src/main/res/layout/fragment_homepage.xml" value="0.1" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad2/app/src/main/res/layout/fragment_instructions.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad2/app/src/main/res/layout/fragment_journals.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/owner/Desktop/AndroidStudioProjects/Bioplastics-Bad2/app/src/main/res/layout/fragment_logging_layout.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/account_layout.xml" value="0.17530864197530865" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.3851851851851852" />
         <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/account_layout.xml" value="0.17530864197530865" />
         <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_new_log.xml" value="0.2878910009411798" />
         <entry key="app/src/main/res/layout/fragment_profilepage.xml" value="0.182518115942029" />
