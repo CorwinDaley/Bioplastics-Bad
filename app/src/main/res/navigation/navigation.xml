@@ -10,13 +10,13 @@
         android:label="fragment_homepage"
         tools:layout="@layout/fragment_homepage" >
         <action
-            android:id="@+id/action_homepage_to_instructionsFragment"
+            android:id="@+id/action_homepageFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment" />
         <action
-            android:id="@+id/action_homepage_to_profilepage"
+            android:id="@+id/action_homepageFragment_to_profilePageFragment"
             app:destination="@id/profilepage" />
         <action
-            android:id="@+id/action_homepage_to_loggingFragment"
+            android:id="@+id/action_homepageFragment_to_loggingFragment"
             app:destination="@id/loggingFragment" />
     </fragment>
     <fragment
