@@ -31,5 +31,6 @@
     <string name="intermediate">Intermediate</string>
     <string name="begginner">Begginner</string>
     <string name="hasn_t_recycled_before">- Hasn\'t recycled before</string>
-
+    <string name="name">name</string>
+    <string name="pronouns">(pronouns)</string>
 </resources>
