@@ -14,25 +14,40 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="-68dp" />
 
     <Button
         android:id="@+id/button_basicCompostingInstruction_instructionFragment"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        tools:layout_editor_absoluteY="217dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <Button
         android:id="@+id/button_insulateHeatInstruction_instructionFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_basicCompostingInstruction_instructionFragment" />
+
+    <Button
+        android:id="@+id/button_readBioplasticLabels_instructionFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_insulateHeatInstruction_instructionFragment"
+        app:layout_constraintVertical_bias="0.353" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

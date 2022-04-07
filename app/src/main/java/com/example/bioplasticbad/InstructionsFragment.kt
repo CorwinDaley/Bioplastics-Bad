@@ -55,6 +55,8 @@ class InstructionsFragment : Fragment() {
             view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
         }
 
+
+
         return rootView
     }
 
