@@ -1,0 +1,26 @@
+[
+  {
+    "account" : {
+      "username" : "JoneCat69",
+      "password" : "Password!",
+      "profilePicture" : "google.com/search?q=image_of_a_profile_picture"
+    },
+    "logs" : {
+      "plasticName" : "Water Bottle",
+      "plasticImage" : "google.com/search?q=image_of_a_water_bottle",
+      "lastComposted" : "2022.4.7",
+      "journal" : {
+        "dateComposted" : "2022.4.7",
+        "plasticImage" : "google.com/search?q=image_of_a_water_bottle",
+        "userNotes" : "The water bottle has begun degrading"
+      }
+    },
+    "personal" : {
+      "name" : "Jonas",
+      "pronouns" : "He/Him",
+      "dateJoined" : "2022.4.1",
+      "accountLevel" : 1,
+      "accountPoints" : 0
+    }
+  }
+]

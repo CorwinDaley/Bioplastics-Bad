@@ -5,6 +5,7 @@ import java.util.*
 data class User(
 
     var account: account,
-    var Logging: logs,
+    var Logs: logs,
     var personal: personal,
+
     )
