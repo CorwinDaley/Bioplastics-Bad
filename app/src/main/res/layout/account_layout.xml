@@ -104,5 +104,17 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_textView_yearsComposting"
         app:layout_constraintVertical_bias="0.097" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountLayout_userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.258" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
