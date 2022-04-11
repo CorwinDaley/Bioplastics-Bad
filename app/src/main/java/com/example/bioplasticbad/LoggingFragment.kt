@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 
 class LoggingLayout : Fragment() {
@@ -22,11 +24,20 @@ class LoggingLayout : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+
+        inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_logging_layout, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_instructions, container, false)
+
+        val compostingInstructionsButton =
+            rootView.findViewById<Button>(R.id.button_logging_newEntry)
+        compostingInstructionsButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_loggingFragment_to_newJournal)
+        }
+
+        return rootView
     }
 
 }

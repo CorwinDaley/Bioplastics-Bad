@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,11 +32,29 @@ class HomepageFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+
+        inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_homepage, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_homepage, container, false)
+
+        val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)
+        profilePageFragmentButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_profilePageFragment)
+        }
+
+        val loggingfragmentButton = rootView.findViewById<Button>(R.id.button_loggingFragment_homePage)
+        loggingfragmentButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_loggingFragment)
+        }
+
+        val instructionsFragmentButton = rootView.findViewById<Button>(R.id.button_instructionsFragment_homePage)
+        instructionsFragmentButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_instructionsFragment)
+        }
+
+        return rootView
     }
 
     companion object {
