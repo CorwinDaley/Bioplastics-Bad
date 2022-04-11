@@ -10,7 +10,7 @@ import com.example.bioplasticbad.R
 import com.example.bioplasticbad.logs
 import java.text.DateFormat.getDateInstance
 
-class LogAdapter(private val log: List<logs>) : RecyclerView.Adapter<LogAdapter.ViewHolder>() {
+class LogsAdapter(private val log: List<logs>) : RecyclerView.Adapter<LogsAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,7 +26,6 @@ class LogAdapter(private val log: List<logs>) : RecyclerView.Adapter<LogAdapter.
     }
 
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         Log.d("Number of items logged", "List Count :${log.size} ")
@@ -34,6 +33,8 @@ class LogAdapter(private val log: List<logs>) : RecyclerView.Adapter<LogAdapter.
         return holder.bind(log[position])
 
     }
+
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         //links object to layout fields

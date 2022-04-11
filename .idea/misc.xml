@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_new_log.xml" value="0.2878910009411798" />
         <entry key="app/src/main/res/layout/fragment_profilepage.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/jounral_entries.xml" value="0.11727456940222898" />
+        <entry key="app/src/main/res/layout/journal_entries.xml" value="0.37324075592566647" />
       </map>
     </option>
   </component>
