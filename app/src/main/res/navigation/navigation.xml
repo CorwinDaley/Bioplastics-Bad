@@ -8,7 +8,7 @@
         android:id="@+id/homepage"
         android:name="com.example.bioplasticbad.HomepageFragment"
         android:label="fragment_homepage"
-        tools:layout="@layout/fragment_homepage" >
+        tools:layout="@layout/activity_main" >
         <action
             android:id="@+id/action_homepageFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment" />

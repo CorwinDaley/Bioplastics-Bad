@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/myNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/navigation"
+        app:defaultNavHost="true" />
+
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,5 +60,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="696dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
