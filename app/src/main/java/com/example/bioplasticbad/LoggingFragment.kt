@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import androidx.navigation.findNavController
 
 
@@ -29,13 +30,18 @@ class LoggingLayout : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_instructions, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_logging_layout, container, false)
 
-        val compostingInstructionsButton =
-            rootView.findViewById<Button>(R.id.button_logging_newEntry)
-        compostingInstructionsButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_loggingFragment_to_newJournal)
+        val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
+        newOrEditJournalButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.newOrEditJounral)
         }
+
+        val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
+        updateDayCountButton.setOnClickListener {
+        }
+
+
 
         return rootView
     }
