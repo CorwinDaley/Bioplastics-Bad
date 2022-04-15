@@ -11,8 +11,10 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:defaultNavHost="true"
         app:navGraph="@navigation/navigation"
-        app:defaultNavHost="true" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="-108dp" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"

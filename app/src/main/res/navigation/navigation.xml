@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/homepage"
         android:name="com.example.bioplasticbad.HomepageFragment"
-        android:label="fragment_homepage"
-        tools:layout="@layout/activity_main" >
+        tools:layout="@layout/fragment_homepage">
+        //CHANGED the tools layout from activity main
         <action
             android:id="@+id/action_homepageFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment" />
@@ -29,7 +29,7 @@
         android:id="@+id/instructionsFragment"
         android:name="com.example.bioplasticbad.InstructionsFragment"
         android:label="fragment_instructions"
-        tools:layout="@layout/fragment_instructions" >
+        tools:layout="@layout/fragment_instructions">
         <action
             android:id="@+id/action_instructionsFragment_to_basicCompostingInstructionFragment"
             app:destination="@id/basicCompostingInstructionFragment" />
@@ -59,7 +59,7 @@
         android:id="@+id/loggingFragment"
         android:name="com.example.bioplasticbad.LoggingLayout"
         android:label="fragment_logging_layout"
-        tools:layout="@layout/fragment_logging_layout" >
+        tools:layout="@layout/fragment_logging_layout">
         <action
             android:id="@+id/newOrEditJounral"
             app:destination="@id/NewJournal" />
@@ -68,7 +68,7 @@
         android:id="@+id/NewJournal"
         android:name="com.example.bioplasticbad.JournalFragment"
         android:label="fragment_new_journal"
-        tools:layout="@layout/fragment_journals" >
+        tools:layout="@layout/fragment_journals">
         <action
             android:id="@+id/action_loggingFragment_to_newJournal"
             app:destination="@id/loggingFragment" />
