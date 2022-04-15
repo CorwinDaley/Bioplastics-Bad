@@ -22,9 +22,11 @@
         android:id="@+id/button_loggingFragment_homePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="Log an Entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_instructionsFragment_homePage" />
 
@@ -32,10 +34,11 @@
         android:id="@+id/button_profilePageFragment_homePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="48dp"
         android:text="My Profile"
+        app:layout_constraintBottom_toTopOf="@+id/button_instructionsFragment_homePage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -43,10 +46,11 @@
         android:id="@+id/button_instructionsFragment_homePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="48dp"
         android:text="How to Compost"
+        app:layout_constraintBottom_toTopOf="@+id/button_loggingFragment_homePage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_profilePageFragment_homePage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

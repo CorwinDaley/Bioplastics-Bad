@@ -13,13 +13,14 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:navGraph="@navigation/navigation"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="-108dp" />
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="295dp" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
+        app:constraint_referenced_ids="button_main_log,button_main_infomation,button_main_forum,button_main_home"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="201dp" />
 
@@ -28,40 +29,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_main_infomation"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_home"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintStart_toEndOf="@+id/button_main_home" />
 
     <Button
         android:id="@+id/button_main_infomation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Info"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_main_forum"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_log"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintStart_toEndOf="@+id/button_main_log" />
 
     <Button
         android:id="@+id/button_main_forum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forum"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_infomation"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintStart_toEndOf="@+id/button_main_infomation" />
 
     <Button
         android:id="@+id/button_main_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_main_log"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
