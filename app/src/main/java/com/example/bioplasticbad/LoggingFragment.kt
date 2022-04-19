@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.bioplasticbad.helpers.LogsAdapter
 
 
 class LoggingLayout : Fragment() {
@@ -40,9 +42,11 @@ class LoggingLayout : Fragment() {
 
         val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
         updateDayCountButton.setOnClickListener {
+            //Toast.makeText(this, "You turned you compost!", Toast.LENGTH_SHORT).show()
         }
 
-
+        val turnCompostCount = rootView.findViewById<ProgressBar>(R.id.progressBar_logging_daysSince)
+        //turnCompostCount.
 
         return rootView
     }

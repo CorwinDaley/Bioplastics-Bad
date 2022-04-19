@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/NewJournal"
-        android:name="com.example.bioplasticbad.JournalFragment"
+        android:name="com.example.bioplasticbad.newOrEditJounral"
         android:label="fragment_new_journal"
         tools:layout="@layout/fragment_journals">
         <action

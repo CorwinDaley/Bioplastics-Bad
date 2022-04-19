@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".JournalFragment">
+    android:layout_height="wrap_content"
+    tools:context=".newOrEditJounral">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,8 +27,8 @@
 
         <EditText
             android:id="@+id/textView_logging_journalEntry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
             android:text="@string/journal_entry"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

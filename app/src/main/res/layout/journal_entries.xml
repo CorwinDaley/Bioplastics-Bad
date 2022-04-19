@@ -6,18 +6,29 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView_entries_date"
+        android:id="@+id/textView_Entry_itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="date"
+        android:text="@string/item_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_entries_userNotes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="notes"
+    <ImageView
+        android:id="@+id/imageView_Entry_optionalPicture"
+        android:layout_width="212dp"
+        android:layout_height="144dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_entries_date" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Entry_itemName"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textView_Entry_journalEntry"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="@string/journal_entry"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Entry_optionalPicture" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
