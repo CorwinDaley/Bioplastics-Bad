@@ -1,9 +1,11 @@
 package com.example.bioplasticbad
 
+import java.util.*
+
 data class logs(
     val plasticName: String,
-    val plasticImage: String,
-    val lastComposted: String,
-    var journal: journal
-
+    var journal: journal,
+    var ownerId: String,
+    var created: Date,
+    var updated: Date
 )

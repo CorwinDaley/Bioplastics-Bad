@@ -1,9 +1,16 @@
 package com.example.bioplasticbad
 
+import java.util.*
+
 data class personal(
     var name: String,
+    var profilePicture: String,
+    var bio: String,
     var pronouns: String,
-    val dateJoined: String,
-    var accountLevel: Int,
-    var accountPoints: Int
+    var level: Int,
+    var experience: Int,
+    var points: Int,
+    var ownerIl: String,
+    var created: Date,
+    var updated: Date
 )

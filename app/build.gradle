@@ -32,6 +32,15 @@ android {
 }
 
 dependencies {
+
+    implementation group: 'com.backendless', name: 'backendless', version: '5.0.+'
+
+    // required for real-time database and real-time messaging
+    implementation ('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'

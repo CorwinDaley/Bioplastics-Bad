@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/account_creation.xml" value="0.16844805472424113" />
+        <entry key="app/src/main/res/layout/account_layout.xml" value="0.17530864197530865" />
+        <entry key="app/src/main/res/layout/account_login.xml" value="0.16844805472424113" />
+        <entry key="app/src/main/res/layout/account_setup.xml" value="0.16844805472424113" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main_test.xml" value="0.18896964514749892" />
+        <entry key="app/src/main/res/layout/app_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_basic_composting_instruction.xml" value="0.16844805472424113" />
         <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.23020833333333332" />
       </map>
