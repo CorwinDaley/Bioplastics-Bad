@@ -55,6 +55,12 @@ class InstructionsFragment : Fragment() {
             view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
         }
 
+        // load in the list from json
+        // put it into the textview
+        var blah = listOf("1. asdfa", "2, asdlkfasdf", "3. asdjf")
+        blah.joinToString {
+            it + "\n\n"
+        }
 
 
         return rootView
