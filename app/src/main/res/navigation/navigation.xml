@@ -61,7 +61,7 @@
         android:label="fragment_logging_layout"
         tools:layout="@layout/fragment_logging_layout">
         <action
-            android:id="@+id/newOrEditJounral"
+            android:id="@+id/editJournal"
             app:destination="@id/NewJournal" />
     </fragment>
     <fragment

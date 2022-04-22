@@ -39,4 +39,5 @@
     <string name="update_day_count">update day count</string>
     <string name="name">name</string>
     <string name="pronouns">(pronouns)</string>
+    <string name="turn_compost_count_value">7</string>
 </resources>
