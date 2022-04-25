@@ -10,10 +10,11 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="326dp"
-        android:layout_height="380dp"
-        android:text="Find a compost bin that fits your personal criteria like the space you have available.  Pick a location for your bin. Make sure it is outside and in direct sunlight for most of the day Fill the bottom of the bin with brown materials like soil and dried brown leaves, dead plants, weeds, sawdust, & hay. Fill the middle of your compost pile with food waste & plastic Before placing larger piece plastic in your compost, try cutting it up into smaller pieces to speed up the decomposition process Make sure your compost doesn’t exceed 30% bioplastic and is mostly green waste like food scraps or yard waste like leaves and weeds Cover the top with more brown materials Keep your compost in a warm environment that gets a lot of sunlight Turn your compost every two weeks while adding more green waste until the bioplastic has decomposed. "
+        android:id="@+id/textView_basicCompost_Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

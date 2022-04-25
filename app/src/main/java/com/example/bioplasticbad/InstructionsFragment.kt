@@ -52,15 +52,9 @@ class InstructionsFragment : Fragment() {
 
         val readBioplasticLabelsButton = rootView.findViewById<Button>(R.id.button_readBioplasticLabels_instructionFragment)
         readBioplasticLabelsButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_insulateHeatInstructionFragment)
+            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_readBioplasticLabelsFragment)
         }
 
-        // load in the list from json
-        // put it into the textview
-        var blah = listOf("1. asdfa", "2, asdlkfasdf", "3. asdjf")
-        blah.joinToString {
-            it + "\n\n"
-        }
 
 
         return rootView

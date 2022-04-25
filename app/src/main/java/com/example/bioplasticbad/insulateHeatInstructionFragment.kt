@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +35,11 @@ class insulateHeatInstructionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_insulate_heat_instruction, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_insulate_heat_instruction, container, false)
+        val textView = view.findViewById<TextView>(R.id.textView_insulateHeat_Instructions)
+        textView.text = resources.getString(R.string.insulateHeatInstruc)
+
+        return view    }
 
     companion object {
 
