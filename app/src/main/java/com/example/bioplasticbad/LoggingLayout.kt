@@ -41,6 +41,7 @@ class LoggingLayout : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_logging_layout, container, false)
         val turnCompostCount = rootView.findViewById<TextView>(R.id.textView_logging_dayCountVal)
+        turnCompostCount.setText("You haven't yet!")
         //val listOfLogs = rootView.findViewById<RecyclerView>(R.id.recyclerView)
 
         val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
@@ -48,18 +49,23 @@ class LoggingLayout : Fragment() {
             view?.findNavController()?.navigate(R.id.editJournal)
         }
 
-        val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
+        val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_turnCompost)
 
         updateDayCountButton.setOnClickListener {
+
+            Toast.makeText(activity?.applicationContext, "turn your compost button", Toast.LENGTH_LONG).show()
+
             turnCompostCount.setText("7 Days Ago")
-            val timer = object: CountDownTimer(20000, 1000) {
+            var days = 8
+            val oneDayInMilliSec: Long = 86400000
+            val timer = object: CountDownTimer(oneDayInMilliSec*7, oneDayInMilliSec) {
                 override fun onTick(millisUntilFinished: Long) {
-
+                    days--
+                    turnCompostCount.setText(days.toString() + " Days Ago")
                 }
-
                 override fun onFinish() {
                     turnCompostCount.setText("You need to turn your compost!")
-                    //Toast.makeText(timer, "You need to turn your compost!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity?.applicationContext, "You need to turn your compost!", Toast.LENGTH_LONG).show()
                 }
             }
             timer.start()
