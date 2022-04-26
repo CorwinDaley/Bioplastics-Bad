@@ -1,22 +1,20 @@
 package com.example.bioplasticbad
 
+import android.os.Build
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.telecom.Call
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.bioplasticbad.helpers.LogsAdapter
-
+import java.time.LocalDate
+import java.time.Period
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 class LoggingLayout : Fragment() {
@@ -33,6 +31,7 @@ class LoggingLayout : Fragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
 
         inflater:LayoutInflater, container : ViewGroup?,
@@ -53,22 +52,19 @@ class LoggingLayout : Fragment() {
 
         updateDayCountButton.setOnClickListener {
 
-            Toast.makeText(activity?.applicationContext, "turn your compost button", Toast.LENGTH_LONG).show()
+            turnCompostCount.setText(" Days Ago")
+            var turnDate = LocalDate.parse(testUser.Logs.lastComposted)
+            var currentDate = LocalDate.now()
+            var daySince = calculatePeriod(turnDate, currentDate)
 
-            turnCompostCount.setText("7 Days Ago")
-            var days = 8
-            val oneDayInMilliSec: Long = 86400000
-            val timer = object: CountDownTimer(oneDayInMilliSec*7, oneDayInMilliSec) {
-                override fun onTick(millisUntilFinished: Long) {
-                    days--
-                    turnCompostCount.setText(days.toString() + " Days Ago")
-                }
-                override fun onFinish() {
-                    turnCompostCount.setText("You need to turn your compost!")
-                    Toast.makeText(activity?.applicationContext, "You need to turn your compost!", Toast.LENGTH_LONG).show()
-                }
-            }
-            timer.start()
+
+
+            turnCompostCount.setText(daySince.toString() + " Days Ago")
+
+
+
+            //turnCompostCount.setText("You need to turn your compost!")
+            Toast.makeText(activity?.applicationContext, "You need to turn your compost!", Toast.LENGTH_LONG).show()
         }
 
         /*listOfLogs.adapter = LogsAdapter(emptyList<logs>())
@@ -82,6 +78,15 @@ class LoggingLayout : Fragment() {
         listOfLogs.adapter?.notifyDataSetChanged()*/
 
         return rootView
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun calculatePeriod(
+        startDate: LocalDate?,
+        endDate: LocalDate?
+    ): Period? {
+        val period = Period.between(startDate, endDate)
+        return period
     }
 
 
