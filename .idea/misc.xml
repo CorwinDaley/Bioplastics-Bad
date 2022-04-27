@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/fragment_instructions.xml" value="0.16545784224841342" />
         <entry key="app/src/main/res/layout/fragment_insulate_heat_instruction.xml" value="0.18896964514749892" />
-        <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.22" />
         <entry key="app/src/main/res/layout/journal_entries.xml" value="0.18" />
       </map>

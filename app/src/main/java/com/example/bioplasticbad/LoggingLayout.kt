@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.compose.ui.graphics.Color
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import java.time.LocalDate
@@ -23,14 +24,12 @@ class LoggingLayout : Fragment() {
 
     var testAccount = account("JoneCat69","Password!","google.com/search?q=image_of_a_profile_picture")
     var testJournal = journal("2022.04.07","google.com/search?q=image_of_a_water_bottle","The water bottle is has begun degrading")
-    var testLogs = logs("Water Bottle", "google.com/search?q=image_of_a_water_bottle","2022.04.07", testJournal)
+    var testLogs = logs("Water Bottle", "google.com/search?q=image_of_a_water_bottle","2022.04.17", testJournal)
     var testPersonal = personal("Jonas","He/Him","2022.04.01",1,0)
     var testUser = User(testAccount, testLogs, testPersonal)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -47,6 +46,18 @@ class LoggingLayout : Fragment() {
 
         var daySince = between(turnDate, currentDate).days
 
+        if (daySince < 5) {
+            //turnCompostCount.textColor(Color.DarkGray)
+            //turnCompostCount.setTextColor(Color.parseColor("#FF0000"))
+        }
+        else if (daySince < 7) {
+            //choose attention grabbing color based on aesthetics of whatever the interface ends up looking like
+            //turnCompostCount.setTextColor("#0aad3f")
+        }
+        else if (daySince > 7) {
+            turnCompostCount.text = "You need to turn your compost!"
+        }
+
 
 
         turnCompostCount.text = daySince.toString() + " Days Ago"
@@ -61,13 +72,8 @@ class LoggingLayout : Fragment() {
         val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_turnCompost)
 
         updateDayCountButton.setOnClickListener {
-
-
-
             turnCompostCount.text = "You just turned it!"
             testUser.Logs.lastComposted = LocalDate.now().toString()
-
-            //turnCompostCount.setText("You need to turn your compost!")
         }
 
         /*listOfLogs.adapter = LogsAdapter(emptyList<logs>())
