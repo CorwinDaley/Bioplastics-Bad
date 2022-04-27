@@ -33,6 +33,11 @@ class LoginFragment : Fragment() {
         val usernameInput = rootView.findViewById<EditText>(R.id.editText_accountLogin_username)
         val passwordInput = rootView.findViewById<EditText>(R.id.editText_accountLogin_password)
         val nextButton = rootView.findViewById<Button>(R.id.button_accountLogin_next)
+        val newAccountButton = rootView.findViewById<Button>(R.id.button_accountLogin_createAccount)
+
+        newAccountButton.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+        }
 
         nextButton.setOnClickListener {
             val username = usernameInput.text.toString()

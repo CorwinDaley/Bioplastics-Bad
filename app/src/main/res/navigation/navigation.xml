@@ -81,6 +81,17 @@
         <action
             android:id="@+id/action_loginFragment_to_homepage"
             app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.bioplasticbad.SignupFragment"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
 </navigation>

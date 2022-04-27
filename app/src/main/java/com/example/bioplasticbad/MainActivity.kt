@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val USER_ID_KEY = "USERIDKEY"
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this,navController)
+
+
+
+
 
         val loggingButton = findViewById<Button>(R.id.button_main_log)
         loggingButton.setOnClickListener {
