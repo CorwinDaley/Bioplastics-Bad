@@ -61,16 +61,16 @@
         android:label="fragment_logging_layout"
         tools:layout="@layout/fragment_logging_layout">
         <action
-            android:id="@+id/newOrEditJounral"
+            android:id="@+id/editJournal"
             app:destination="@id/NewJournal" />
     </fragment>
     <fragment
         android:id="@+id/NewJournal"
-        android:name="com.example.bioplasticbad.JournalFragment"
+        android:name="com.example.bioplasticbad.NewOrEditJournal"
         android:label="fragment_new_journal"
         tools:layout="@layout/fragment_journals">
         <action
-            android:id="@+id/action_loggingFragment_to_newJournal"
+            android:id="@+id/action_newJournal_to_Logging"
             app:destination="@id/loggingFragment" />
     </fragment>
 

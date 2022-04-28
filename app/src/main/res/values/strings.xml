@@ -39,6 +39,7 @@
     <string name="update_day_count">update day count</string>
     <string name="name">name</string>
     <string name="pronouns">(pronouns)</string>
+    <string name="turn_compost_count_value">7</string>
 
     <string name="compostInstruc">1. Find a compost bin that fits your personal criteria like the space you have available. \n2. Pick a location for your bin. Make sure it is outside and in direct sunlight for most of the day. \n3. Fill the bottom of the bin with brown materials like soil and dried brown leaves, dead plants, weeds, sawdust, and hay. \n4. Fill the middle of your compost pile with food waste and plastic\n\ta. Before placing larger piece plastic in your compost, try cutting it up into smaller pieces to speed up the decomposition process.\n5. Make sure your compost doesn\’t exceed 30% bioplastic and is mostly green waste like food scraps or yard waste like leaves and weeds.\n6. Cover the top with more brown materials.\n7. Keep your compost in a warm environment that gets a lot of sunlight.\n8. Turn your compost every two weeks while adding more green waste until the bioplastic has decomposed.
 </string>

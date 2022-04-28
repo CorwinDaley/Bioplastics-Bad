@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".JournalFragment">
+    android:layout_height="wrap_content"
+    tools:context=".NewOrEditJournal">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,33 +13,33 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/textView_Logging_itemName"
+            android:id="@+id/textView_newJournal_itemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/item_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <ImageView
-            android:id="@+id/imageView_logging_optionalPicture"
+            android:id="@+id/imageView_newJournal_optionalPicture"
             android:layout_width="212dp"
             android:layout_height="144dp"
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <EditText
-            android:id="@+id/textView_logging_journalEntry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/textView_newJournal_journalEntry"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
             android:text="@string/journal_entry"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <Button
-            android:id="@+id/button_logging_editJournal"
+            android:id="@+id/button_newJournal_finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/finish" />
 
         <Button
-            android:id="@+id/button_logging_editJournal2"
+            android:id="@+id/button_newJournal_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="cancel" />
