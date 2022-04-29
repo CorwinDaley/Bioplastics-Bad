@@ -46,21 +46,23 @@ class LoggingLayout : Fragment() {
 
         var daySince = between(turnDate, currentDate).days
 
+        turnCompostCount.text = "$daySince Days Ago"
+
+        //choose attention grabbing color based on aesthetics of whatever the interface ends up looking like
         if (daySince < 5) {
-            //turnCompostCount.textColor(Color.DarkGray)
-            //turnCompostCount.setTextColor(Color.parseColor("#FF0000"))
+            //turnCompostCount.setTextColor(Color.DarkGray)
         }
         else if (daySince < 7) {
             //choose attention grabbing color based on aesthetics of whatever the interface ends up looking like
             //turnCompostCount.setTextColor("#0aad3f")
         }
-        else if (daySince > 7) {
+        else {
             turnCompostCount.text = "You need to turn your compost!"
         }
 
 
 
-        turnCompostCount.text = daySince.toString() + " Days Ago"
+
 
         //val listOfLogs = rootView.findViewById<RecyclerView>(R.id.recyclerView)
 

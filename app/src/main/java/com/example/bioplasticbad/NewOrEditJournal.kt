@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,13 +27,27 @@ class NewOrEditJournal : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_journals, container, false)
         // Inflate the layout for this fragment
         val cancelButton = rootView.findViewById<Button>(R.id.button_newJournal_cancel)
-        return inflater.inflate(R.layout.fragment_journals, container, false)
+        val finishButton = rootView.findViewById<Button>(R.id.button_newJournal_finish)
+        val entry = rootView.findViewById<EditText>(R.id.textView_newJournal_itemName)
+        val itemName = rootView.findViewById<EditText>(R.id.textView_newJournal_itemName)
+        val blankText = ""
 
         cancelButton.setOnClickListener {
+            //just need to reset and go back
+            entry.setText(blankText)
+            itemName.setText(blankText)
+            view?.findNavController()?.navigate(R.id.action_newJournal_to_Logging)
 
         }
+        finishButton.setOnClickListener {
+            // add all the values in the edit texts to the user's journal object before going back
 
 
+            entry.setText(blankText)
+            itemName.setText(blankText)
+            view?.findNavController()?.navigate(R.id.action_newJournal_to_Logging)
+        }
+        return rootView
     }
 
 }

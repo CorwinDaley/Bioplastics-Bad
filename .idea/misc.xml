@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/account_creation.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/account_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main_test.xml" value="0.18896964514749892" />
         <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.23020833333333332" />
-        <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/fragment_instructions.xml" value="0.16545784224841342" />
+        <entry key="app/src/main/res/layout/fragment_insulate_heat_instruction.xml" value="0.18896964514749892" />
+        <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/journal_entries.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
