@@ -1,6 +1,7 @@
 package com.example.bioplasticbad
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,8 +52,11 @@ class SignupFragment : Fragment(){
             val password = passwordInput.text.toString()
 
             val user = BackendlessUser()
+
             user.setProperty(username, email)
             user.password = password
+            user.email = email
+            Log.d("nextbutton", "onCreateView: we clicked the button")
 
             Backendless.UserService.register(user, object : AsyncCallback<BackendlessUser?> {
                 override fun handleResponse(registeredUser: BackendlessUser?) {
@@ -63,6 +67,7 @@ class SignupFragment : Fragment(){
                     bundle.putString(SIGNUP_PASSWORD_KEY, password)
 
                     findNavController().navigate(R.id.action_signupFragment_to_loginFragment, bundle)
+                    Log.d("success", "handleResponse: ${registeredUser?.userId}")
                 }
 
                 override fun handleFault(fault: BackendlessFault) {
@@ -70,26 +75,29 @@ class SignupFragment : Fragment(){
 
                     // an error has occurred, the error code can be retrieved with fault.getCode()
                     val errorCode = fault.code
-                    var errorMessage = "$errorCode: " + when (errorCode.toInt()) {
-                      3009 -> "User registration is closed at this time, please come back later."
-                      3010 -> "Please do not use special characters in your username or password"
-                      3011 -> "Missing password"
-                      3012 -> "Fill out all required fields"
-                      3013 -> "Missing an identity"
-                      3014 -> "An external error has occured, please try again"
-                      3021 -> "General error"
-                      3033 -> "That username already exists"
-                      3038 -> "Missing session ID"
-                      3039 -> "Invalid session ID"
-                      3040 -> "Incorrect email address"
-                      3041 -> "Fill out all required fields"
-                      3043 -> "Matching user exists"
-                      8000 -> "Exceeded character limit"
+                    var errorMessage = "$errorCode: " + when (errorCode) {
+                      "3009" -> "User registration is closed at this time, please come back later."
+                      "3010" -> "Please do not use special characters in your username or password"
+                      "3011" -> "Missing password"
+                      "3012" -> "Fill out all required fields"
+                      "3013" -> "Missing an identity"
+                      "3014" -> "An external error has occured, please try again"
+                      "3021" -> "General error"
+                      "3033" -> "That username already exists"
+                      "3038" -> "Missing session ID"
+                      "3039" -> "Invalid session ID"
+                      "3040" -> "Incorrect email address"
+                      "3041" -> "Fill out all required fields"
+                      "3043" -> "Matching user exists"
+                      "8000" -> "Exceeded character limit"
 
                         else -> {
                             "An unknown error has occurred"
+                            Log.d("Signup Fragment", "handleFault: ${fault.code} \n${fault.message}\n${fault.detail}")
                         }
+
                     }
+                    Log.d("Signup Fragment", "handleFault: $errorMessage \n${fault.message}\n${fault.detail}")
 
 
                 }
