@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountSetup_birthday2"
+        android:id="@+id/editText_accountSetup_otherGender"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:hint="@string/other"
@@ -19,16 +19,17 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button_accountLogin_next2"
+        android:id="@+id/button_accountSetup_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.857"
+        app:rippleColor="#00913636" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,11 +38,11 @@
         android:layout_marginStart="28dp"
         android:layout_marginEnd="10dp"
         android:contentDescription="@string/necessarymarker"
-        app:layout_constraintBottom_toBottomOf="@+id/editText_accountSetup_birthday"
-        app:layout_constraintEnd_toStartOf="@+id/editText_accountSetup_birthday"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_accountSetup_password"
+        app:layout_constraintEnd_toStartOf="@+id/editText_accountSetup_password"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_birthday"
+        app:layout_constraintTop_toTopOf="@+id/editText_accountSetup_password"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:ignore="ImageContrastCheck" />
 
@@ -59,10 +60,11 @@
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_accountSetup_birthday"
+        android:id="@+id/editText_accountSetup_password"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:hint="@string/birthday"
+        android:inputType="textPassword"
+        android:hint="@string/password"
         app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -135,52 +137,6 @@
         app:layout_constraintVertical_bias="0.07999998"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/textView_accountSetup_preference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/preferences"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editText_accountSetup_phoneNumber"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
-        app:layout_constraintVertical_bias="0.351" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="312dp"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView_accountSetup_contactInformation"
-        app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_contactInformation"
-        app:layout_constraintVertical_bias="0.42000002">
-
-        <RadioButton
-            android:id="@+id/radioButton_accountSetup_light"
-            android:layout_width="105dp"
-            android:layout_height="34dp"
-            android:text="@string/light"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="105dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/dark"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <RadioButton
-            android:id="@+id/radioButton_accountSetup_extraDark"
-            android:layout_width="105dp"
-            android:layout_height="match_parent"
-            android:text="@string/extra_dark"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </RadioGroup>
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText_accountSetup_email"
         android:layout_width="315dp"
@@ -210,7 +166,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroup_accountSetup_gender"
         android:layout_width="309dp"
         android:layout_height="38dp"
         android:orientation="horizontal"
@@ -221,14 +177,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_accountSetup_basicInformation">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radioButton_accountSetup_male"
             android:layout_width="105dp"
             android:layout_height="match_parent"
             android:text="@string/male"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButton_accountSetup_female"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
             android:text="@string/female"
@@ -237,7 +193,7 @@
             tools:layout_editor_absoluteY="661dp" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButton_accountSetup_other"
             android:layout_width="105dp"
             android:layout_height="match_parent"
             android:text="@string/other"

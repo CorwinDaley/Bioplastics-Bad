@@ -42,6 +42,10 @@ class HomepageFragment : Fragment() {
         }
 
 
+        // accessing the bundle that got you here uses arguments
+        arguments?.getString(LoginFragment.LOGIN_KEY)
+
+
         return rootView
     }
 }
