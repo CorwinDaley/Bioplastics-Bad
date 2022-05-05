@@ -14,6 +14,11 @@ import androidx.navigation.findNavController
 
 class NewOrEditJournal : Fragment() {
 
+    var testAccount = account("JoneCat69","Password!","google.com/search?q=image_of_a_profile_picture")
+    var testJournal = journal("2022.04.07","google.com/search?q=image_of_a_water_bottle","The water bottle is has begun degrading")
+    var testLogs = logs("Water Bottle", "google.com/search?q=image_of_a_water_bottle","2022.04.17", testJournal)
+    var testPersonal = personal("Jonas","He/Him","2022.04.01",1,0)
+    var testUser = User(testAccount, testLogs, testPersonal)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +46,7 @@ class NewOrEditJournal : Fragment() {
         }
         finishButton.setOnClickListener {
             // add all the values in the edit texts to the user's journal object before going back
+            // add to journal string b/c no array yet :///
 
 
             entry.setText(blankText)
