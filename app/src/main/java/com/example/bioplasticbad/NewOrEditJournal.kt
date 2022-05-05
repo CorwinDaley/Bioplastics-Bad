@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,6 +48,7 @@ class NewOrEditJournal : Fragment() {
         finishButton.setOnClickListener {
             // add all the values in the edit texts to the user's journal object before going back
             // add to journal string b/c no array yet :///
+
 
 
             entry.setText(blankText)

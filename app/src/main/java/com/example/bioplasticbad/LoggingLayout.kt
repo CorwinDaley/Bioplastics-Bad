@@ -12,6 +12,9 @@ import androidx.annotation.RequiresApi
 import androidx.compose.ui.graphics.Color
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.bioplasticbad.helpers.LogsAdapter
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.Period
@@ -43,6 +46,7 @@ class LoggingLayout : Fragment() {
         val turnCompostCount = rootView.findViewById<TextView>(R.id.textView_logging_dayCountVal)
         var turnDate = LocalDate.parse(testUser.Logs.lastComposted, DateTimeFormatter.ofPattern("yyyy.MM.dd", Locale.ENGLISH))
         var currentDate = LocalDate.now()
+        val logsRecycler = rootView.findViewById<RecyclerView>(R.id.recyclerView)
 
         var daySince = between(turnDate, currentDate).days
 
@@ -58,8 +62,21 @@ class LoggingLayout : Fragment() {
         }
         else {
             turnCompostCount.text = "You need to turn your compost!"
+            Toast.makeText(requireContext(), "You need to turn your compost", Toast.LENGTH_LONG).show()
         }
 
+        logsRecycler.adapter = LogsAdapter(emptyList<logs>())
+        logsRecycler.layoutManager
+
+        logsRecycler.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = LogsAdapter(emptyList<logs>())
+
+        }
+
+
+        logsRecycler.adapter?.notifyDataSetChanged()
 
 
 
@@ -78,18 +95,14 @@ class LoggingLayout : Fragment() {
             testUser.Logs.lastComposted = LocalDate.now().toString()
         }
 
-        /*listOfLogs.adapter = LogsAdapter(emptyList<logs>())
-        listOfLogs.layoutManager
-
-        listOfLogs.apply {
-            setHasFixedSize(true)
-            adapter = LogsAdapter(emptyList<logs>())
-        }
-
-        listOfLogs.adapter?.notifyDataSetChanged()*/
-
         return rootView
     }
+
+    private fun loadLogs() {
+
+    }
+
+
 
 
 }
