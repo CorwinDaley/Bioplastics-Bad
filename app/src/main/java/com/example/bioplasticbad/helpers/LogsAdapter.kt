@@ -42,7 +42,7 @@ class LogsAdapter(private val log: List<logs>) : RecyclerView.Adapter<LogsAdapte
             itemView.findViewById<TextView>(R.id.textView_Entry_itemName).text = log.plasticName
             //image
             //itemView.findViewById<>()
-            itemView.findViewById<TextView>(R.id.textView_Entry_journalEntry).text = "Date:" + log.journal.dateComposted + " " + log.journal.userNotes
+           // itemView.findViewById<TextView>(R.id.textView_Entry_journalEntry).text = "Date:" + log.journal.dateComposted + " " + log.journal.userNotes
             //maybe add image string later...
 
         }
