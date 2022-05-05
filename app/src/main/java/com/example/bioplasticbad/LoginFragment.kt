@@ -55,7 +55,7 @@ class LoginFragment : Fragment() {
         // Double check for null usernames or passwords first please!
 
         Backendless.UserService.login(
-            username,
+            username.lowercase(),
             password,
 
             object : AsyncCallback<BackendlessUser?> {

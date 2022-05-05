@@ -1,14 +1,12 @@
 package com.example.bioplasticbad
 
 import android.os.Bundle
+import android.widget.Toast
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.backendless.Backendless
@@ -46,13 +44,11 @@ class SignupFragment : Fragment(){
 
         val nextButton = rootView.findViewById<Button>(R.id.button_accountSetup_next)
 
-        fun nulChecker(): Boolean{
-            if(usernameInput == null || passwordInput == null || emailInput == null){
-                nextButton.background.alpha = 0
-                return true
+        fun nullChecker(): Boolean{
+            if(usernameInput.text.toString() == "" || passwordInput.text.toString() == "" || emailInput.text.toString() == ""){
+                return false
             }
-            nextButton.background.alpha = 125
-            return false
+            return true
         }
 
 
@@ -63,11 +59,12 @@ class SignupFragment : Fragment(){
 
             val user = BackendlessUser()
 
-            user.setProperty(username, email)
+            user.setProperty("username", username.lowercase())
             user.password = password
             user.email = email
             Log.d("nextbutton", "onCreateView: we clicked the button")
 
+            if (nullChecker()) {
 
             Backendless.UserService.register(user, object : AsyncCallback<BackendlessUser?> {
                 override fun handleResponse(registeredUser: BackendlessUser?) {
@@ -112,6 +109,11 @@ class SignupFragment : Fragment(){
 
                 }
             })
+            } else {
+                Toast.makeText(requireActivity(), "Please fill out your password and username", Toast.LENGTH_LONG).show()
+                nextButton.background.alpha = 100
+
+            }
 
 
         }

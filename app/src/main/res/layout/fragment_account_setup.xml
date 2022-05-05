@@ -63,6 +63,7 @@
         android:id="@+id/editText_accountSetup_password"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="@string/password"
         app:layout_constraintBottom_toTopOf="@+id/textView_accountSetup_contactInformation"
         app:layout_constraintEnd_toEndOf="parent"
