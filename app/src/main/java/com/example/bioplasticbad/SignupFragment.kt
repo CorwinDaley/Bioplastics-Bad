@@ -46,6 +46,16 @@ class SignupFragment : Fragment(){
 
         val nextButton = rootView.findViewById<Button>(R.id.button_accountSetup_next)
 
+        fun nulChecker(): Boolean{
+            if(usernameInput == null || passwordInput == null || emailInput == null){
+                nextButton.background.alpha = 0
+                return true
+            }
+            nextButton.background.alpha = 125
+            return false
+        }
+
+
         nextButton.setOnClickListener(){
             val username = usernameInput.text.toString()
             val email = emailInput.text.toString()
@@ -57,6 +67,7 @@ class SignupFragment : Fragment(){
             user.password = password
             user.email = email
             Log.d("nextbutton", "onCreateView: we clicked the button")
+
 
             Backendless.UserService.register(user, object : AsyncCallback<BackendlessUser?> {
                 override fun handleResponse(registeredUser: BackendlessUser?) {
@@ -93,7 +104,6 @@ class SignupFragment : Fragment(){
 
                         else -> {
                             "An unknown error has occurred"
-                            Log.d("Signup Fragment", "handleFault: ${fault.code} \n${fault.message}\n${fault.detail}")
                         }
 
                     }
