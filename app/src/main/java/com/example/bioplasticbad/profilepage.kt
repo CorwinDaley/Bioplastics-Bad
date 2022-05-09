@@ -24,12 +24,15 @@ class profilepage : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    var editable = false
 
 
     override fun onCreateView(
         inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         var editable = 0
         Log.d("profilepage: ", "Editable set to " + editable)
         // Inflate the layout for this fragment
@@ -47,21 +50,36 @@ class profilepage : Fragment() {
         val editProfile = rootView.findViewById<Button>(R.id.button_accountLayout_editProfile)
         editProfile.setOnClickListener {
             editable = 1
+            toggleEditable()
         }
 
-        //val cancelEdit = rootView.findViewById<Button>(R.id.button_accountLayout_cancel)
-        //cancelEdit.setOnClickListener{
-        //    editable = 0
+        val cancelEdit = rootView.findViewById<Button>(R.id.button_accountLayout_cancel)
+        cancelEdit.setOnClickListener{
+            editable = 0
               //revert any changes made
-        //}
+        }
 
-        //val saveEdit = rootView.findViewById<Button>(R.id.button_accountLayout_done)
-        //cancelEdit.setOnClickListener{
-        //    editable = 0
+        val saveEdit = rootView.findViewById<Button>(R.id.button_accountLayout_done)
+        cancelEdit.setOnClickListener{
+            editable = 0
               //save changes made
-        //}
+        }
 
         return inflater.inflate(R.layout.fragment_account_layout, container, false)
+    }
+
+    private fun toggleEditable() {
+        TODO("Not yet implemented")
+        // set editable variable to the opposite value
+        // based on that value, enable or disable the edittexts
+    }
+
+    private fun enableEditTexts() {
+
+    }
+
+    private fun disableEditTexts() {
+
     }
 
 
