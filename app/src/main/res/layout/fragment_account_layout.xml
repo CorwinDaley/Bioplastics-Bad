@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_view"
+        android:id="@+id/imageView_accoutnLayout_pfp"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@color/purple_200"
@@ -34,64 +34,13 @@
         android:layout_height="wrap_content"
         android:text="@string/username"
         android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/image_view"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_accoutnLayout_pfp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <TextView
-        android:id="@+id/acountLayout_name_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view"
-        app:layout_constraintVertical_bias="0.017" />
-
-    <TextView
-        android:id="@+id/layout_name_pronouns"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pronouns"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acountLayout_name_textView"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/layout_textView_yearsComposting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="years composting"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_name_pronouns"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <TextView
-        android:id="@+id/layout_textView_bio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="bio"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_textView_yearsComposting"
-        app:layout_constraintVertical_bias="0.097" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_accountLayout_editProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit Profile"
@@ -101,6 +50,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editText_accountLayout_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/editText_accountLayout_pronouns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_accoutnLayout_pfp" />
+
+    <EditText
+        android:id="@+id/editText_accountLayout_pronouns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Pronouns"
+        app:layout_constraintBottom_toTopOf="@+id/textView_accountLayout_yrs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_accountLayout_yrs"
+        android:layout_width="86dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_accountLayout_yrs" />
+
+    <TextView
+        android:id="@+id/textView_accountLayout_yrs"
+        android:layout_width="201dp"
+        android:layout_height="37dp"
+        android:text="Years Composting:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <EditText
+        android:id="@+id/editText_accountLayout_bio"
+        android:layout_width="323dp"
+        android:layout_height="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Bio:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_accountLayout_yrs" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
