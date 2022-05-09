@@ -32,6 +32,8 @@ class profilepage : Fragment() {
         }
     }
 
+    var editable = 0
+
     override fun onCreateView(
         inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,12 +41,30 @@ class profilepage : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_account_layout, container, false)
 
-        rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = false
+        if (editable == 0){
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = false
+        }
+        else if(editable == 1)
+        {
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = true
+        }
 
         val editProfile = rootView.findViewById<Button>(R.id.button_accountLayout_editProfile)
         editProfile.setOnClickListener {
-            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = true
+            editable = 1
         }
+
+        //val cancelEdit = rootView.findViewById<Button>(R.id.button_accountLayout_cancel)
+        //cancelEdit.setOnClickListener{
+        //    editable = 0
+              //revert any changes made
+        //}
+
+        //val saveEdit = rootView.findViewById<Button>(R.id.button_accountLayout_done)
+        //cancelEdit.setOnClickListener{
+        //    editable = 0
+              //save changes made
+        //}
 
         return inflater.inflate(R.layout.fragment_account_layout, container, false)
     }
