@@ -63,10 +63,10 @@
         tools:layout="@layout/fragment_logging_layout">
         <action
             android:id="@+id/editJournal"
-            app:destination="@id/NewJournal" />
+            app:destination="@id/NewOrEditJournal" />
     </fragment>
     <fragment
-        android:id="@+id/NewJournal"
+        android:id="@+id/NewOrEditJournal"
         android:name="com.example.bioplasticbad.NewOrEditJournal"
         android:label="fragment_new_journal"
         tools:layout="@layout/fragment_journals">

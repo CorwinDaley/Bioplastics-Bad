@@ -35,7 +35,7 @@ class LoggingFragment : Fragment() {
 
        val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
         newOrEditJournalButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.NewJournal)
+            view?.findNavController()?.navigate(R.id.NewOrEditJournal)
         }
 
         val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
