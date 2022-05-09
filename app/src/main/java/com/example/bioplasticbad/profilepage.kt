@@ -43,10 +43,12 @@ class profilepage : Fragment() {
 
         if (editable == 0){
             rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = false
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isClickable = false
         }
         else if(editable == 1)
         {
             rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = true
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isClickable = true
         }
 
         val editProfile = rootView.findViewById<Button>(R.id.button_accountLayout_editProfile)
