@@ -1,6 +1,7 @@
 package com.example.bioplasticbad
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,6 +31,7 @@ class profilepage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var editable = 0
+        Log.d("profilepage: ", "Editable set to 0" + editable)
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_account_layout, container, false)
 
