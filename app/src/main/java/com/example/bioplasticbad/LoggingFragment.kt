@@ -13,11 +13,11 @@ import androidx.navigation.findNavController
 
 class LoggingFragment : Fragment() {
 
-    //var testAccount = account("JoneCat69","Password!","google.com/search?q=image_of_a_profile_picture")
-   // var testJournal = journal("2022.4.7","google.com/search?q=image_of_a_water_bottle","The water bottle is has begun degrading")
-   // var testLogs = logs("Water Bottle", "google.com/search?q=image_of_a_water_bottle","2022.4.7", testJournal)
-   // var testPersonal = personal("Jonas","He/Him","2022.4.1",1,0)
-   // var testUser = User(testAccount, testLogs, testPersonal)
+/*    var testAccount = Account("JoneCat69","Password!","google.com/search?q=image_of_a_profile_picture")
+   var testJournal = journal("2022.4.7","google.com/search?q=image_of_a_water_bottle","The water bottle is has begun degrading")
+    var testLogs = logs("Water Bottle", "google.com/search?q=image_of_a_water_bottle","2022.4.7", testJournal)
+    var testPersonal = personal("Jonas","He/Him","2022.4.1",1,0)
+   var testUser = User(testAccount, testLogs, testPersonal)*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +32,11 @@ class LoggingFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_logging_layout, container, false)
-//
-//        val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
-//        newOrEditJournalButton.setOnClickListener {
-//            view?.findNavController()?.navigate(R.id.newOrEditJounral)
-//        }
+
+       val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
+        newOrEditJournalButton.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.NewJournal)
+        }
 
         val updateDayCountButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
         updateDayCountButton.setOnClickListener {
