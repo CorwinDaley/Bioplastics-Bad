@@ -31,12 +31,13 @@ class profilepage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var editable = 0
-        Log.d("profilepage: ", "Editable set to 0" + editable)
+        Log.d("profilepage: ", "Editable set to " + editable)
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_account_layout, container, false)
 
         if (editable == 0){
             rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isEnabled = false
+            Log.d("profilepage: ", "Editable set to " + rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isEnabled)
         }
         else if(editable == 1)
         {
