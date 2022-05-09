@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/profilepage"
         android:name="com.example.bioplasticbad.profilepage"
-        android:label="fragment_profilepage"
+        android:label="fragment_account_layout"
         tools:layout="@layout/fragment_profilepage" />
     <fragment
         android:id="@+id/instructionsFragment"
