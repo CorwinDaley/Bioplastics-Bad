@@ -3,14 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/account_creation.xml" value="0.2871376811594203" />
-        <entry key="app/src/main/res/layout/account_layout.xml" value="0.17530864197530865" />
-        <entry key="app/src/main/res/layout/account_login.xml" value="0.2871376811594203" />
-        <entry key="app/src/main/res/layout/account_setup.xml" value="0.2871376811594203" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1358695652173913" />
-        <entry key="app/src/main/res/layout/app_login.xml" value="0.2078804347826087" />
-        <entry key="app/src/main/res/layout/fragment_account_login.xml" value="0.2078804347826087" />
-        <entry key="app/src/main/res/layout/fragment_account_setup.xml" value="0.2078804347826087" />
         <entry key="app/src/main/res/layout/account_creation.xml" value="0.1" />
         <entry key="app/src/main/res/layout/account_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -20,15 +12,10 @@
         <entry key="app/src/main/res/layout/fragment_insulate_heat_instruction.xml" value="0.18896964514749892" />
         <entry key="app/src/main/res/layout/fragment_journals.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_logging_layout.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_read_bioplastic_labels.xml" value="0.1" />
         <entry key="app/src/main/res/layout/journal_entries.xml" value="0.1" />
       </map>
     </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
