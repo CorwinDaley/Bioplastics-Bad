@@ -34,13 +34,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_logging_dayCount" />
 
 
-<!--    <androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_logging_dayCountVal" />-->
+        app:layout_constraintTop_toBottomOf="@+id/button_logging_turnCompost" />
 
     <Button
         android:id="@+id/button_logging_newEntry"

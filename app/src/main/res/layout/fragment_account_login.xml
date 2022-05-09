@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button_accountLogin_passwordForget2"
+        android:id="@+id/button_accountLogin_createAccount"
         android:layout_width="144dp"
         android:layout_height="31dp"
         android:text="@string/create_account"
