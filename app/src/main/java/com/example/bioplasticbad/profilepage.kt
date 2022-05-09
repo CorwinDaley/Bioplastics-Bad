@@ -32,7 +32,7 @@ class profilepage : Fragment() {
         }
     }
 
-    var editable = 0
+    private var editable = 0
 
     override fun onCreateView(
         inflater:LayoutInflater, container : ViewGroup?,
@@ -42,13 +42,11 @@ class profilepage : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_account_layout, container, false)
 
         if (editable == 0){
-            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = false
-            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isClickable = false
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isEnabled = false
         }
         else if(editable == 1)
         {
-            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isFocusable = true
-            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isClickable = true
+            rootView.findViewById<EditText>(R.id.editText_accountLayout_name).isEnabled = true
         }
 
         val editProfile = rootView.findViewById<Button>(R.id.button_accountLayout_editProfile)
