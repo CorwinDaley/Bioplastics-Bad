@@ -24,20 +24,12 @@ class profilepage : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    private var editable = 0
 
     override fun onCreateView(
         inflater:LayoutInflater, container : ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var editable = 0
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_account_layout, container, false)
 
