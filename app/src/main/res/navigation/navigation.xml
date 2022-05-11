@@ -58,9 +58,8 @@
         tools:layout="@layout/fragment_read_bioplastic_labels" />
     <fragment
         android:id="@+id/loggingFragment"
-        android:name="com.example.bioplasticbad.LoggingLayout"
-        android:label="fragment_logging_layout"
-        tools:layout="@layout/fragment_logging_layout">
+        android:name="com.example.bioplasticbad.LoggingFragment"
+        android:label="fragment_logging_layout">
         <action
             android:id="@+id/editJournal"
             app:destination="@id/NewOrEditJournal" />
