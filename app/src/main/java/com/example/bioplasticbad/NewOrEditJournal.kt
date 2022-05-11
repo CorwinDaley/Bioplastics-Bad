@@ -17,6 +17,7 @@ import androidx.navigation.findNavController
 class NewOrEditJournal : Fragment(){
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -53,4 +54,5 @@ class NewOrEditJournal : Fragment(){
         }
         return rootView
     }
+
 }
