@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -37,10 +38,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         val loggingButton = findViewById<Button>(R.id.button_main_log)
-        loggingButton.setOnClickListener {
-            Toast.makeText(this, "Log button has been pressed", Toast.LENGTH_LONG).show()
-        }
+            loggingButton.isVisible = false
+
+        val homeButton = findViewById<Button>(R.id.button_main_home)
+            homeButton.isVisible = false
+
+        val forumButton = findViewById<Button>(R.id.button_main_forum)
+            forumButton.isVisible = false
+
+        val infoButton = findViewById<Button>(R.id.button_main_infomation)
+            infoButton.isVisible = false
 
     }
     override fun onSupportNavigateUp(): Boolean {
