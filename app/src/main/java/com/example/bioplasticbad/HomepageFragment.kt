@@ -16,6 +16,7 @@ class HomepageFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val userId = savedInstanceState?.getString(MainActivity.USER_ID_KEY)
     }
 
     override fun onCreateView(
@@ -28,17 +29,17 @@ class HomepageFragment : Fragment() {
 
         val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)
         profilePageFragmentButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_profilePageFragment)
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_profilePageFragment, savedInstanceState)
         }
 
         val instructionsFragmentButton = rootView.findViewById<Button>(R.id.button_instructionsFragment_homePage)
         instructionsFragmentButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_instructionsFragment)
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_instructionsFragment, savedInstanceState)
         }
 
         val toLoggingButton = rootView.findViewById<Button>(R.id.button_loggingFragment_homePage)
         toLoggingButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_loggingFragment)
+            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_loggingFragment, savedInstanceState)
         }
 
 

@@ -1,9 +1,9 @@
 package com.example.bioplasticbad
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -29,9 +29,7 @@ class MainActivity : AppCompatActivity() {
             "B6BC75E8-E224-40E6-FFF3-0493FAE41F00",
             "2492C2DA-9DD5-436A-A97E-27B6DCAB1FFF" )
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
-        val navController = navHostFragment.navController
-        NavigationUI.setupActionBarWithNavController(this,navController)
+
 
 
 
@@ -52,8 +50,6 @@ class MainActivity : AppCompatActivity() {
 
     fun getAccount(username: String, password: String) {
 
-    // Connect the backendless to our account
-        Backendless.initApp( "B6BC75E8-E224-40E6-FFF3-0493FAE41F00", "neededlettuce.backendless.app" )
 
         // Double check for null usernames or passwords first please!
 

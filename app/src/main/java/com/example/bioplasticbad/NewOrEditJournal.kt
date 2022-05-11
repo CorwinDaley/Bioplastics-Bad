@@ -9,7 +9,7 @@ import android.view.ViewGroup
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
-class JournalFragment : Fragment() {
+class NewOrEditJournal : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
