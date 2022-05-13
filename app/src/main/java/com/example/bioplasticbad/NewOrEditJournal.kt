@@ -1,6 +1,7 @@
 package com.example.bioplasticbad
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -43,6 +44,25 @@ class NewOrEditJournal : Fragment(){
         finish.setOnClickListener {
             // add all the values in the edit texts to the user's journal object before going back
             // add to journal string b/c no array yet :///
+            //get corresponding logs based on itemName
+
+
+            if(testUser?.getProperty("logs") == null) {
+                //make new log for user based on plastic name
+                //testUser?.setProperty("logs",)
+
+            }
+            else{
+                // make new journal for user and add to exisitng log based on itemName
+
+                var editedLog = testUser?.getProperty("logs") as String
+
+                Log.d("NewOrEditLogFragment", "Log type: " + editedLog)
+
+            }
+
+
+
             view?.findNavController()?.navigate(R.id.action_newJournal_to_Logging)
         }
 
