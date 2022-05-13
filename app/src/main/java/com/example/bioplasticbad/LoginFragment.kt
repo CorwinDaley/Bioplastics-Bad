@@ -27,22 +27,22 @@ class LoginFragment : Fragment() {
 
         //Async callback, obtains current user object
 
-        if (Backendless.UserService.loggedInUser() != null) {
-            Backendless.UserService.CurrentUser(true, object : AsyncCallback<BackendlessUser> {
-                override fun handleResponse(user: BackendlessUser?) {
-                    // User has logged in
-                    var ownerId = user?.objectId
-                    var bundle = Bundle()
-                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)
-
-                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)
-                }
-
-                override fun handleFault(fault: BackendlessFault?) {
-
-                }
-            })
-        }
+//        if (Backendless.UserService.loggedInUser() != null) {
+//            Backendless.UserService.CurrentUser(true, object : AsyncCallback<BackendlessUser> {
+//                override fun handleResponse(user: BackendlessUser?) {
+//                    // User has logged in
+//                    var ownerId = user?.objectId
+//                    var bundle = Bundle()
+//                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)
+//
+//                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)
+//                }
+//
+//                override fun handleFault(fault: BackendlessFault?) {
+//
+//                }
+//            })
+//        }
 
         // Inflate the layout for this fragment
         var rootView = inflater.inflate(R.layout.fragment_account_login, container, false)

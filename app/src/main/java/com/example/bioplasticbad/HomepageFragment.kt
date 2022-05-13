@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
+import com.backendless.Backendless
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +27,12 @@ class HomepageFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_homepage, container, false)
+
+        val logoutButton = rootView.findViewById<Button>(R.id.button_homePage_logOut)
+        logoutButton.setOnClickListener {
+            Backendless.UserService.logout()
+            view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)
+        }
 
         val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)
         profilePageFragmentButton.setOnClickListener {

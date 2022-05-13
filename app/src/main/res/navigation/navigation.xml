@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_homepageFragment_to_loggingFragment"
             app:destination="@id/loggingFragment" />
+        <action
+            android:id="@+id/action_homepage_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilepage"

@@ -29,12 +29,6 @@ class MainActivity : AppCompatActivity() {
             "B6BC75E8-E224-40E6-FFF3-0493FAE41F00",
             "2492C2DA-9DD5-436A-A97E-27B6DCAB1FFF" )
 
-
-
-
-
-
-
         val loggingButton = findViewById<Button>(R.id.button_main_log)
         loggingButton.setOnClickListener {
             Toast.makeText(this, "Log button has been pressed", Toast.LENGTH_LONG).show()
