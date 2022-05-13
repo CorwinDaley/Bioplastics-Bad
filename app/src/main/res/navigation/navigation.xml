@@ -19,7 +19,7 @@
             app:destination="@id/profilepage" />
         <action
             android:id="@+id/action_homepageFragment_to_loggingFragment"
-            app:destination="@id/loggingFragment" />
+            app:destination="@id/LoggingFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilepage"
@@ -57,7 +57,7 @@
         android:label="fragment_read_bioplastic_labels"
         tools:layout="@layout/fragment_read_bioplastic_labels" />
     <fragment
-        android:id="@+id/loggingFragment"
+        android:id="@+id/LoggingFragment"
         android:name="com.example.bioplasticbad.LoggingFragment"
         android:label="fragment_logging_layout">
         <action
@@ -71,7 +71,7 @@
         tools:layout="@layout/fragment_journals">
         <action
             android:id="@+id/action_newJournal_to_Logging"
-            app:destination="@id/loggingFragment" />
+            app:destination="@id/LoggingFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

@@ -60,6 +60,7 @@ class LoggingFragment : Fragment() {
             } else if (daySince > 7) {
                 turnCompostCount.text = "You need to turn your compost!"
             }
+            testUser?.setProperty("lastComposted", currentDate)
         }
     }
 

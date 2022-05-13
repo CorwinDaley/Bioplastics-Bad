@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -77,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                     var ownerId = user?.objectId
                     var bundle = Bundle()
                     bundle.putString(USER_ID_KEY,ownerId)
-
                 }
 
                 override fun handleFault(fault: BackendlessFault){
