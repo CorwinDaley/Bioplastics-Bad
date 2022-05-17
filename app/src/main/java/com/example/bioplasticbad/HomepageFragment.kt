@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
 import com.backendless.Backendless
+import com.backendless.BackendlessUser
+import com.backendless.async.callback.AsyncCallback
+import com.backendless.exceptions.BackendlessFault
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,9 +33,19 @@ class HomepageFragment : Fragment() {
 
         val logoutButton = rootView.findViewById<Button>(R.id.button_homePage_logOut)
         logoutButton.setOnClickListener {
-            Backendless.UserService.logout()
-            view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)
+            Backendless.UserService.logout(object : AsyncCallback<Void?>{
+                override fun handleResponse(response: Void?) {
+                    view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)
+                }
+
+                override fun handleFault(fault: BackendlessFault?) {
+
+                }
+
+            })
         }
+
+
 
         val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)
         profilePageFragmentButton.setOnClickListener {
