@@ -15,6 +15,8 @@ import com.backendless.Backendless
 import com.backendless.BackendlessUser
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
+import com.backendless.persistence.DataQueryBuilder
+import java.util.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,6 +43,7 @@ class NewOrEditJournal : Fragment(){
     }
 
     private fun displayData(testUser: BackendlessUser?) {
+        val currentDate = java.util.Calendar.getInstance()
         finish.setOnClickListener {
             // add all the values in the edit texts to the user's journal object before going back
             // add to journal string b/c no array yet :///
@@ -50,14 +53,25 @@ class NewOrEditJournal : Fragment(){
             if(testUser?.getProperty("logs") == null) {
                 //make new log for user based on plastic name
                 //testUser?.setProperty("logs",)
+                val plasticType = itemName.toString()
+                val newJournal = journal(plasticType, entry.toString(), testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
+                val newLog = logs(plasticType, newJournal, testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
+
+                testUser?.setProperty("logs", newLog)
 
             }
             else{
-                // make new journal for user and add to exisitng log based on itemName
+                // make new journal for user and add to exisiting log based on itemName
 
-                var editedLog = testUser?.getProperty("logs") as String
+                val queryBuilder = DataQueryBuilder.create()
+                queryBuilder.addProperties("itemName", "journal")
+                Backendless.Data.of("testUser").find(queryBuilder)
 
-                Log.d("NewOrEditLogFragment", "Log type: " + editedLog)
+                // set new entry  in journal as a log
+
+                Log.d("NewOrEditLogFragment", "Log type: " + queryBuilder)
+
+
 
             }
 
