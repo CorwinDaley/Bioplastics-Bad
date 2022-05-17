@@ -1,0 +1,93 @@
+Index: app/src/main/java/com/example/bioplasticbad/LoginFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bioplasticbad\n\nimport android.os.Bundle\nimport android.util.Log\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport android.widget.Button\nimport android.widget.CheckBox\nimport android.widget.EditText\nimport androidx.fragment.app.Fragment\nimport androidx.navigation.fragment.findNavController\nimport com.backendless.Backendless\nimport com.backendless.BackendlessUser\nimport com.backendless.async.callback.AsyncCallback\nimport com.backendless.exceptions.BackendlessFault\n\nclass LoginFragment : Fragment() {\n    companion object {\n        val LOGIN_KEY = \"j7o%g71Ps\"\n    }\n\n    override fun onCreateView(\n        inflater: LayoutInflater, container: ViewGroup?,\n        savedInstanceState: Bundle?\n    ): View? {\n\n        //Async callback, obtains current user object\n\n//        if (Backendless.UserService.loggedInUser() != null) {\n//            Backendless.UserService.CurrentUser(true, object : AsyncCallback<BackendlessUser> {\n//                override fun handleResponse(user: BackendlessUser?) {\n//                    // User has logged in\n//                    var ownerId = user?.objectId\n//                    var bundle = Bundle()\n//                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)\n//\n//                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)\n//                }\n//\n//                override fun handleFault(fault: BackendlessFault?) {\n//\n//                }\n//            })\n//        }\n\n        // Inflate the layout for this fragment\n        var rootView = inflater.inflate(R.layout.fragment_account_login, container, false)\n\n        // wire any widgets and do click listeners between here\n        val usernameInput = rootView.findViewById<EditText>(R.id.editText_accountLogin_username)\n        val passwordInput = rootView.findViewById<EditText>(R.id.editText_accountLogin_password)\n        val nextButton = rootView.findViewById<Button>(R.id.button_accountLogin_next)\n        val newAccountButton = rootView.findViewById<Button>(R.id.button_accountLogin_createAccount)\n\n        val rememberMeBox = rootView.findViewById<CheckBox>(R.id.checkBox_accountLogin_rememberMe)\n\n        newAccountButton.setOnClickListener{\n            findNavController().navigate(R.id.action_loginFragment_to_signupFragment)\n        }\n\n        nextButton.setOnClickListener {\n            val username = usernameInput.text.toString()\n            val password = passwordInput.text.toString()\n\n            loginAccount(username, password, rememberMeBox.isChecked)\n        }\n\n        return rootView\n    }\n\n\n    fun loginAccount(username: String, password: String, stayLoggedIn: Boolean) {\n\n\n        // Double check for null usernames or passwords first please!\n\n\n        Backendless.UserService.login(\n            username.lowercase(),\n            password,\n\n            object : AsyncCallback<BackendlessUser?> {\n\n                override fun handleResponse(user: BackendlessUser?) {\n                    // User has logged in\n                    var ownerId = user?.objectId\n                    var bundle = Bundle()\n                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)\n\n                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)\n                }\n\n                override fun handleFault(fault: BackendlessFault) {\n                    // Error has occurred\n                    Log.d(\"LoginFragment\", \"handleFault: ${fault.message}\")\n                }\n            },\n            stayLoggedIn\n\n        )\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bioplasticbad/LoginFragment.kt b/app/src/main/java/com/example/bioplasticbad/LoginFragment.kt
+--- a/app/src/main/java/com/example/bioplasticbad/LoginFragment.kt	(revision 28632fd0b06297a84ea719da3ae3a056d553ddbc)
++++ b/app/src/main/java/com/example/bioplasticbad/LoginFragment.kt	(date 1652819263627)
+@@ -27,22 +27,22 @@
+ 
+         //Async callback, obtains current user object
+ 
+-//        if (Backendless.UserService.loggedInUser() != null) {
+-//            Backendless.UserService.CurrentUser(true, object : AsyncCallback<BackendlessUser> {
+-//                override fun handleResponse(user: BackendlessUser?) {
+-//                    // User has logged in
+-//                    var ownerId = user?.objectId
+-//                    var bundle = Bundle()
+-//                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)
+-//
+-//                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)
+-//                }
+-//
+-//                override fun handleFault(fault: BackendlessFault?) {
+-//
+-//                }
+-//            })
+-//        }
++        if (Backendless.UserService.loggedInUser() != "") {
++            Backendless.UserService.CurrentUser(true, object : AsyncCallback<BackendlessUser> {
++                override fun handleResponse(user: BackendlessUser?) {
++                    // User has logged in
++                    var ownerId = user?.objectId
++                    var bundle = Bundle()
++                    bundle.putString(MainActivity.USER_ID_KEY, ownerId)
++
++                    findNavController().navigate(R.id.action_loginFragment_to_homepage, bundle)
++                }
++
++                override fun handleFault(fault: BackendlessFault?) {
++
++                }
++            })
++        }
+ 
+         // Inflate the layout for this fragment
+         var rootView = inflater.inflate(R.layout.fragment_account_login, container, false)
+Index: app/src/main/java/com/example/bioplasticbad/HomepageFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bioplasticbad\n\nimport android.os.Bundle\nimport androidx.fragment.app.Fragment\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport android.widget.Button\nimport androidx.navigation.findNavController\nimport com.backendless.Backendless\n\n// TODO: Rename parameter arguments, choose names that match\n// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER\n\nclass HomepageFragment : Fragment() {\n\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n\n        val userId = savedInstanceState?.getString(MainActivity.USER_ID_KEY)\n    }\n\n    override fun onCreateView(\n\n        inflater:LayoutInflater, container : ViewGroup?,\n        savedInstanceState: Bundle?\n    ): View? {\n        // Inflate the layout for this fragment\n        val rootView = inflater.inflate(R.layout.fragment_homepage, container, false)\n\n        val logoutButton = rootView.findViewById<Button>(R.id.button_homePage_logOut)\n        logoutButton.setOnClickListener {\n            Backendless.UserService.logout()\n            view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)\n        }\n\n        val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)\n        profilePageFragmentButton.setOnClickListener {\n            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_profilePageFragment, savedInstanceState)\n        }\n\n        val instructionsFragmentButton = rootView.findViewById<Button>(R.id.button_instructionsFragment_homePage)\n        instructionsFragmentButton.setOnClickListener {\n            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_instructionsFragment, savedInstanceState)\n        }\n\n        val toLoggingButton = rootView.findViewById<Button>(R.id.button_loggingFragment_homePage)\n        toLoggingButton.setOnClickListener {\n            view?.findNavController()?.navigate(R.id.action_homepageFragment_to_loggingFragment, savedInstanceState)\n        }\n\n\n        // accessing the bundle that got you here uses arguments\n        arguments?.getString(LoginFragment.LOGIN_KEY)\n\n\n        return rootView\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bioplasticbad/HomepageFragment.kt b/app/src/main/java/com/example/bioplasticbad/HomepageFragment.kt
+--- a/app/src/main/java/com/example/bioplasticbad/HomepageFragment.kt	(revision 28632fd0b06297a84ea719da3ae3a056d553ddbc)
++++ b/app/src/main/java/com/example/bioplasticbad/HomepageFragment.kt	(date 1652819527200)
+@@ -8,6 +8,9 @@
+ import android.widget.Button
+ import androidx.navigation.findNavController
+ import com.backendless.Backendless
++import com.backendless.BackendlessUser
++import com.backendless.async.callback.AsyncCallback
++import com.backendless.exceptions.BackendlessFault
+ 
+ // TODO: Rename parameter arguments, choose names that match
+ // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+@@ -30,10 +33,20 @@
+ 
+         val logoutButton = rootView.findViewById<Button>(R.id.button_homePage_logOut)
+         logoutButton.setOnClickListener {
+-            Backendless.UserService.logout()
+-            view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)
+-        }
++            Backendless.UserService.logout(object : AsyncCallback<Void?>{
++                override fun handleResponse(response: Void?) {
++                    view?.findNavController()?.navigate(R.id.action_homepage_to_loginFragment, savedInstanceState)
++                }
+ 
++                override fun handleFault(fault: BackendlessFault?) {
++                    
++                }
++
++            })
++        }
++
++
++
+         val profilePageFragmentButton = rootView.findViewById<Button>(R.id.button_profilePageFragment_homePage)
+         profilePageFragmentButton.setOnClickListener {
+             view?.findNavController()?.navigate(R.id.action_homepageFragment_to_profilePageFragment, savedInstanceState)

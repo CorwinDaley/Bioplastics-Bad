@@ -26,16 +26,6 @@ class LoggingFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Async callback, obtains current user object
-        Backendless.UserService.CurrentUser(true, object:AsyncCallback<BackendlessUser> {
-            override fun handleResponse(user: BackendlessUser?) {
-                // ALL DATA THAT REVOLVES AROUND THE USER MUST BE IN DISPLAYDATA
-                displayData(user)
-            }
-            override fun handleFault(fault: BackendlessFault?) {
-                TODO("Not yet implemented")
-            }
-        })
     }
 
     private fun displayData(testUser: BackendlessUser?) {
@@ -72,6 +62,29 @@ class LoggingFragment : Fragment() {
     // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_logging_layout, container, false)
         turnCompostCount = rootView.findViewById<TextView>(R.id.textView_logging_dayCountVal)
+
+
+        //Async callback, obtains current user object
+        Backendless.UserService.CurrentUser(true, object:AsyncCallback<BackendlessUser> {
+            override fun handleResponse(user: BackendlessUser?) {
+                // ALL DATA THAT REVOLVES AROUND THE USER MUST BE IN DISPLAYDATA
+                displayData(user)
+            }
+            override fun handleFault(fault: BackendlessFault?) {
+                TODO("Not yet implemented")
+            }
+        })
+
+        //Async callback, obtains current user object
+        Backendless.UserService.CurrentUser(true, object:AsyncCallback<BackendlessUser> {
+            override fun handleResponse(user: BackendlessUser?) {
+                // ALL DATA THAT REVOLVES AROUND THE USER MUST BE IN DISPLAYDATA
+                displayData(user)
+            }
+            override fun handleFault(fault: BackendlessFault?) {
+                TODO("Not yet implemented")
+            }
+        })
 
         val newOrEditJournalButton = rootView.findViewById<Button>(R.id.button_logging_newEntry)
         newOrEditJournalButton.setOnClickListener {
