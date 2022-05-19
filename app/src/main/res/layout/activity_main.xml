@@ -20,49 +20,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="button_main_log,button_main_infomation,button_main_forum,button_main_home"
+        app:constraint_referenced_ids="bottomNavigationView"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="201dp" />
 
-    <Button
-        android:id="@+id/button_main_log"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_main_infomation"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_home" />
-
-    <Button
-        android:id="@+id/button_main_infomation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Info"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_main_forum"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_log" />
-
-    <Button
-        android:id="@+id/button_main_forum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forum"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="411dp"
+        android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_main_infomation" />
-
-    <Button
-        android:id="@+id/button_main_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_main_log"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

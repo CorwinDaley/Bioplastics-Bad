@@ -29,6 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.example.bioplasticbad'
 }
 
 dependencies {
@@ -42,9 +43,11 @@ dependencies {
         exclude group: 'org.json', module: 'json'
     }
 
+    // used for the circle profile image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // May be extraneous as we have 1.5.0 not sure if they overlap though.
+    implementation 'com.google.android.material:material:1.2.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
