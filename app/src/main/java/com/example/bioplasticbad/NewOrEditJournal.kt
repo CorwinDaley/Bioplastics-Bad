@@ -49,7 +49,6 @@ class NewOrEditJournal : Fragment(){
             // add to journal string b/c no array yet :///
             //get corresponding logs based on itemName
 
-
             if(testUser?.getProperty("logs") == null) {
                 //make new log for user based on plastic name
                 //testUser?.setProperty("logs",)
@@ -69,7 +68,7 @@ class NewOrEditJournal : Fragment(){
                 queryBuilder.addProperties("itemName", "journal")
                 Backendless.Data.of("testUser").find(queryBuilder)
 
-              //  Log.d("NewOrEditLogFragment", "Log type: " + editedLog)
+                Log.d("NewOrEditLogFragment", "Log type: " + queryBuilder)
 
 
             }
