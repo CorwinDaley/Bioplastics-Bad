@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:navGraph="@navigation/navigation"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="295dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
