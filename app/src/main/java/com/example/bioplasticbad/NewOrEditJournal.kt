@@ -62,15 +62,14 @@ class NewOrEditJournal : Fragment(){
 
             }
             else{
-                // make new journal for user and add to exisiting log based on itemName
+                // make new journal for user and add to exisitng log based on itemName
 
                 val queryBuilder = DataQueryBuilder.create()
                 queryBuilder.addProperties("itemName", "journal")
                 Backendless.Data.of("testUser").find(queryBuilder)
 
-                // set new entry  in journal as a log
+              //  Log.d("NewOrEditLogFragment", "Log type: " + editedLog)
 
-                Log.d("NewOrEditLogFragment", "Log type: " + queryBuilder)
 
             }
 
