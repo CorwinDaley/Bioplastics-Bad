@@ -55,7 +55,8 @@ class NewOrEditJournal : Fragment(){
                 //testUser?.setProperty("logs",)
                 val plasticType = itemName.toString()
                 val newJournal = journal(plasticType, entry.toString(), testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
-                val newLog = logs(plasticType, newJournal, testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
+                val newJournals : List<journal> = listOf(newJournal)
+                val newLog = logs(plasticType, newJournals, testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
 
                 testUser?.setProperty("logs", newLog)
 
@@ -70,8 +71,6 @@ class NewOrEditJournal : Fragment(){
                 // set new entry  in journal as a log
 
                 Log.d("NewOrEditLogFragment", "Log type: " + queryBuilder)
-
-
 
             }
 
