@@ -37,9 +37,13 @@ class LoggingFragment : Fragment() {
 
             val currentDate = java.util.Calendar.getInstance()
 
-            var daySince: Long = (turnDate.time - currentDate.time.time) / 1000 / 60 / 60 / 24
+            var daySince: Long = (currentDate.time.time - turnDate.time) / 1000 / 60 / 60 / 24
 
-            turnCompostCount.text = daySince.toString() + " Days Ago"
+            if(daySince.toString() != "1") {
+                turnCompostCount.text = daySince.toString() + " Days Ago"}
+            else {
+                turnCompostCount.text = daySince.toString() + " Day Ago"
+            }
 
             if (daySince < 5) {
                 //turnCompostCount.textColor(Color.DarkGray)
