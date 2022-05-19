@@ -19,7 +19,7 @@
             app:destination="@id/profilepage" />
         <action
             android:id="@+id/action_homepageFragment_to_loggingFragment"
-            app:destination="@id/loggingFragment" />
+            app:destination="@id/LoggingFragment" />
         <action
             android:id="@+id/action_homepage_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -29,7 +29,7 @@
         android:id="@+id/profilepage"
         android:name="com.example.bioplasticbad.profilepage"
         android:label="fragment_account_layout"
-        tools:layout="@layout/fragment_profilepage" />
+        />
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.example.bioplasticbad.InstructionsFragment"

@@ -53,6 +53,7 @@ class NewOrEditJournal : Fragment(){
             if(testUser?.getProperty("logs") == null) {
                 //make new log for user based on plastic name
                 //testUser?.setProperty("logs",)
+
                 val plasticType = itemName.toString()
                 val newJournal = journal(plasticType, entry.toString(), testUser?.getProperty("ownerId") as String, currentDate as Date, currentDate as Date)
                 val newJournals : List<journal> = listOf(newJournal)
